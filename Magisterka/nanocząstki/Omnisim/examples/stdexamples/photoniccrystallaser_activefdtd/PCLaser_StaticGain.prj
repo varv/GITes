@@ -1,0 +1,2510 @@
+begin <pdApplicationInfo(1.1)>
+  OmniSim + CrystalWave 4.9 // applicationname applicationversion
+  765 // licensenumber
+  6.1 (64 bit) 12136.43 // windowsversion RAM_in_MB 
+  04/11/2013 17:12:17 // savedate(dd/mm/yyyy) savetime(hh:mm:ss)
+end
+begin <pdEditorProject(1.0)> "MembraneLaser"
+  begin <PcDevice(1.19)> "Single Defect - Active"
+    -5.000000001e-007 4.0900005 -1.4936695 1.500001 // zmin zmax xmin xmax
+    25 // temperature
+    "refbase-membrane.mat" // materialsdatabase
+    begin <pdObjectList(1.0)> "PhysicalLayers"
+      begin <pdPhysicalLayer(1.3)>
+        "AirBottom" // name
+        0.2 // thickness
+        0 // graded
+        1 1 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        88 88 176 1 1 // red green blue shading visible
+      end
+      begin <pdPhysicalLayer(1.3)>
+        "InP" // name
+        0.2 // thickness
+        0 // graded
+        3 3.21 0 1 3.21 3.21 3.21 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "InPGain" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 // active
+        1 // trueactivethickness
+        88 88 176 1 1 // red green blue shading visible
+      end
+      begin <pdPhysicalLayer(1.3)>
+        "AirTop" // name
+        0.2 // thickness
+        0 // graded
+        1 1 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        176 88 176 1 1 // red green blue shading visible
+      end
+    end
+    begin <pdObjectList(1.0)> "ObjectLayers"
+      begin <pdMaskLayer(1.8)>
+        "InP (active)" // name
+        1 1 0 // operation inverse fillgraded
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 0 1 // topspec toplayerindex topy
+        1 0 1 1 // bottomspec bottomlayerindex bottomy depth
+        1 0 0 1 // etchstopspec etchstoplayerindex etchstopy etchdepth
+        1 5 0.15 0 0 0 0 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+        "x" // profilegenericfunction
+        1 0 // perform2d mask2dgraded
+        3 1.44 1297173.7 1 1.44 1.44 1.44 0 0 0 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+        "aluminium" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        0 0 176 1 1 // red green blue shading visible
+      end
+      begin <pdMaskLayer(1.8)>
+        "InP (edge)" // name
+        3 1 0 // operation inverse fillgraded
+        1 3.21 0 1 2.5 2.5 2.5 0 0 0 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2 1 // topspec toplayerindex topy
+        1 0 1 1 // bottomspec bottomlayerindex bottomy depth
+        1 1 0 1 // etchstopspec etchstoplayerindex etchstopy etchdepth
+        1 5 0.15 0 0 0 0 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+        "x" // profilegenericfunction
+        1 0 // perform2d mask2dgraded
+        1 3.21 0 1 2.5 2.5 2.5 0 0 0 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        64 64 255 1 1 // red green blue shading visible
+      end
+      begin <PcAtomObject3DLayer(1.1)>
+        "3D Atom Layer" // name
+        0 // grading
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        160 0 160 1 1 // red green blue shading visible
+      end
+      begin <PcAtomMaskLayer(1.8)>
+        "Atom Layer" // name
+        2 0 // operation fillgraded
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 0 1 // topspec toplayerindex topy
+        1 0 1 1 // bottomspec bottomlayerindex bottomy depth
+        1 0 0 1 // etchstopspec etchstoplayerindex etchstopy etchdepth
+        1 5 0.15 0 0 0 0 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+        "x" // profilegenericfunction
+        1 0 // perform2d mask2dgraded
+        1 1 0 1 1 1 1 0 0 0 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 1 0 1 1 1 1 0 0 0 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        255 255 255 1 1 // red green blue shading visible
+      end
+    end
+    4 // atomobject2dlayerstartindex
+    begin <pdObjectList(1.0)> "PaletteAtoms2D"
+      begin <PcAtom(1.6)>
+        ELLIPSE(0.175,0.175) // width, height
+        "Ellipse" // name
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        4 // objectlayerindex
+        1 // useobjectlayercolour
+      end
+      begin <PcAtom(1.6)>
+        RECTANGLE(0.3,0.3) // width, height
+        "Rectangle" // name
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        4 // objectlayerindex
+        1 // useobjectlayercolour
+      end
+      begin <PcAtom(1.6)>
+        REGPOLY(6,90,0.3,0.3) // numvertices, angle, width, height
+        "RegPoly" // name
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        4 // objectlayerindex
+        1 // useobjectlayercolour
+      end
+      begin <PcAtom(1.6)>
+        POLYGON(-0.15,-0.15,0.15,-0.15,0,0.15) // point1x, point1y, point2x, point2y, ...
+        "Polygon" // name
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        4 // objectlayerindex
+        1 // useobjectlayercolour
+      end
+    end
+    begin <pdObjectList(1.0)> "NonPaletteAtoms2D"
+    end
+    begin <pdObjectList(1.0)> "PaletteAtoms3D"
+      begin <PcAtom(1.6)>
+        ELLIPSE(0.3,0.3) // width, height
+        "Ellipsoid" // name
+        0.3 // sizey
+        1 1 0 1 1 1 1 0 0 0 // hole3dspec hole3drix hole3dalpha hole3dpermeability hole3drixx hole3drixyy hole3drixzz hole3drixxy hole3drixxz hole3drixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        3 // objectlayerindex
+        0 255 255 255 // useobjectlayercolour red green blue
+      end
+    end
+    begin <pdObjectList(1.0)> "Objects"
+      begin <FsRectangle(1.2)>
+        2 0.003165 0 // positionz positionx angle
+        1 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        4 2.993669 // sizez sizex
+        begin <PcLattice2D(1.0)>
+          0.365 0.365 0 60 2.1825 -0.003165 // latticeconstant1 latticeconstant2 latticeangle1 latticeangle2 latticeoriginz latticeoriginx
+          0 // numunitcells
+          98 // numlatticeatoms
+          // ispaletteatom atomindex latticepointn latticepointp offsetz offsetx offsetangle
+          1 1 -8 -4 0 0 0
+          1 1 -7 -4 0 0 0
+          1 1 -6 -4 0 0 0
+          1 1 -5 -4 0 0 0
+          1 1 -4 -4 0 0 0
+          1 1 -3 -4 0 0 0
+          1 1 -2 -4 0 0 0
+          1 1 -1 -4 0 0 0
+          1 1 0 -4 0 0 0
+          1 1 1 -4 0 0 0
+          1 1 -8 -3 0 0 0
+          1 1 -7 -3 0 0 0
+          1 1 -6 -3 0 0 0
+          1 1 -5 -3 0 0 0
+          1 1 -4 -3 0 0 0
+          1 1 -3 -3 0 0 0
+          1 1 -2 -3 0 0 0
+          1 1 -1 -3 0 0 0
+          1 1 0 -3 0 0 0
+          1 1 1 -3 0 0 0
+          1 1 -9 -2 0 0 0
+          1 1 -8 -2 0 0 0
+          1 1 -7 -2 0 0 0
+          1 1 -6 -2 0 0 0
+          1 1 -5 -2 0 0 0
+          1 1 -4 -2 0 0 0
+          1 1 -3 -2 0 0 0
+          1 1 -2 -2 0 0 0
+          1 1 -1 -2 0 0 0
+          1 1 0 -2 0 0 0
+          1 1 -9 -1 0 0 0
+          1 1 -8 -1 0 0 0
+          1 1 -7 -1 0 0 0
+          1 1 -6 -1 0 0 0
+          1 1 -5 -1 0 0 0
+          1 1 -4 -1 0 0 0
+          1 1 -3 -1 0 0 0
+          1 1 -2 -1 0 0 0
+          1 1 -1 -1 0 0 0
+          1 1 0 -1 0 0 0
+          1 1 -10 0 0 0 0
+          1 1 -9 0 0 0 0
+          1 1 -8 0 0 0 0
+          1 1 -7 0 0 0 0
+          1 1 -4 0 0 0 0
+          1 1 -3 0 0 0 0
+          1 1 -2 0 0 0 0
+          1 1 -1 0 0 0 0
+          1 1 -10 1 0 0 0
+          1 1 -9 1 0 0 0
+          1 1 -8 1 0 0 0
+          1 1 -7 1 0 0 0
+          1 1 -6 1 0 0 0
+          1 1 -5 1 0 0 0
+          1 1 -4 1 0 0 0
+          1 1 -3 1 0 0 0
+          1 1 -2 1 0 0 0
+          1 1 -1 1 0 0 0
+          1 1 -11 2 0 0 0
+          1 1 -10 2 0 0 0
+          1 1 -9 2 0 0 0
+          1 1 -8 2 0 0 0
+          1 1 -7 2 0 0 0
+          1 1 -6 2 0 0 0
+          1 1 -5 2 0 0 0
+          1 1 -4 2 0 0 0
+          1 1 -3 2 0 0 0
+          1 1 -2 2 0 0 0
+          1 1 -11 3 0 0 0
+          1 1 -10 3 0 0 0
+          1 1 -9 3 0 0 0
+          1 1 -8 3 0 0 0
+          1 1 -7 3 0 0 0
+          1 1 -6 3 0 0 0
+          1 1 -5 3 0 0 0
+          1 1 -4 3 0 0 0
+          1 1 -3 3 0 0 0
+          1 1 -2 3 0 0 0
+          1 1 -12 4 0 0 0
+          1 1 -11 4 0 0 0
+          1 1 -10 4 0 0 0
+          1 1 -9 4 0 0 0
+          1 1 -8 4 0 0 0
+          1 1 -7 4 0 0 0
+          1 1 -6 4 0 0 0
+          1 1 -5 4 0 0 0
+          1 1 -4 4 0 0 0
+          1 1 -3 4 0 0 0
+          1 1 -5 0 0 0 0
+          1 1 -9 -4 0 0 0
+          1 1 -10 -2 0 0 0
+          1 1 -11 0 0 0 0
+          1 1 -12 2 0 0 0
+          1 1 -13 4 0 0 0
+          1 1 -12 3 0 0 0
+          1 1 -11 1 0 0 0
+          1 1 -10 -1 0 0 0
+          1 1 -9 -3 0 0 0
+        end
+      end
+      begin <pdEndSection(1.0)>
+        2.366374 // positionz
+      end
+      begin <FsRectangle(1.2)>
+        3.99 0.003165 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        0.2 2.993669 // sizez sizex
+      end
+      begin <FsRectangle(1.2)>
+        0.1 0.003165 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        0.2 2.993669 // sizez sizex
+      end
+      begin <pdDipoleExcitor(1.2)>
+        2 0 0 // positionz positionx angle
+        0 0 // sizez sizex
+        4 2 1 // ymaxspec ymaxlayer ymaxcoordinate
+        4 2 1 // yminspec yminlayer ymincoordinate
+        3 2 20 0 // timeenvshape timeenvwidthspec timeenvwidth timeenvdelay
+        "" // timeenvfunction
+        1 1.55 "" 0 1.000000e-006 // chirpswitch wavelength endwavelength phase power
+        "" // phasefunction
+        1 1 1 100 // polarisation coherent coherencespec coherence
+      end
+      begin <pdSensorZX(1.3)>
+        2.2 0 0 // positionz positionx angle
+        0.15 // sizex
+        3 2 1 // ymaxspec ymaxlayer ymaxcoordinate
+        5 2 1 // yminspec yminlayer ymincoordinate
+        "Cavity" // name
+        1 // transformtype
+      end
+      begin <pdSideSection(1.0)>
+        -0.000616 // positionx
+      end
+      begin <pdSensorY(1.3)>
+        2 0 0 // positionz positionx angle
+        1.5 1.5 // sizez sizex
+        1 0 1 // ypositionspec ypositionlayer ypositioncoordinate
+        "Top" // name
+        1 // transformtype
+        1 // upward
+      end
+      begin <FsRectangle(1.2)>
+        2.045 1.448166 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        4.090001 0.10367 // sizez sizex
+      end
+      begin <FsRectangle(1.2)>
+        2.045 -1.441834 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        4.090001 0.10367 // sizez sizex
+      end
+    end
+    begin <pdObjectList(1.0)> "Constraints"
+    end
+    begin <pdFDTDParameters(1.17)>
+      3 2 7000 0 // numdimensions durationspec duration centralwavelength
+      1 0.02 // gridtype gridspacing
+      8 1 1 2 // pmlthickness pmlstructure pmlfactor pmlexponent
+      1 // boundarycondition
+      0 // overridexneg
+      0 // overridexpos
+      0 // overrideyneg
+      0 // overrideypos
+      0 // overridezneg
+      0 // overridezpos
+      0.4 1 10 10 // minwavelength maxwavelength mixingtolerance epsilontolerance
+      0.05 10000 0.05 0.01 // gradingrixtolerance gradingalphatolerance gradingpermeabilitytolerance gradingparamtolerance
+      begin <pdFDTDMaterialParamsDatabase(1.1)>
+        2 // numentries
+        begin <pdFDTDMaterialParameters(1.5)>
+          "aluminium" // materialname
+          0 0 0 0 // hasxparam hasyparam xparam yparam
+          0 0 4 0 0 1 // epsnonlinear epsilontolerance epsmodel munonlinear mutolerance mumodel 
+          1 // numpoles
+          1 1 // amplitude relaxationtime
+          1 1 // valuestatic valueinfinity
+          1 1 // collisionfrequency plasmafrequency
+          1 // numpoles
+          -100000 0.5 1573.446575 // amplitude dampingconstant resonantfrequency
+          10.3041 1 // valuestatic valueinfinity
+          1 // valuestatic
+          1 // gainmultiplier
+          1 // numpoles
+          1 1 // amplitude relaxationtime
+          1 1 // valuestatic valueinfinity
+          1 1 // collisionfrequency plasmafrequency
+          1 // numpoles
+          1 1 1 // amplitude dampingconstant resonantfrequency
+          1 1 // valuestatic valueinfinity
+          1 // valuestatic
+        end
+        begin <pdFDTDMaterialParameters(1.5)>
+          "InPGain" // materialname
+          0 0 0 0 // hasxparam hasyparam xparam yparam
+          0 0 6 0 0 1 // epsnonlinear epsilontolerance epsmodel munonlinear mutolerance mumodel 
+          1 // numpoles
+          1 1 // amplitude relaxationtime
+          1 1 // valuestatic valueinfinity
+          1 1 // collisionfrequency plasmafrequency
+          1 // numpoles
+          1 1 1 // amplitude dampingconstant resonantfrequency
+          1 1 // valuestatic valueinfinity
+          1 // valuestatic
+          1 // gainmultiplier
+          1 // numpoles
+          1 1 // amplitude relaxationtime
+          1 1 // valuestatic valueinfinity
+          1 1 // collisionfrequency plasmafrequency
+          1 // numpoles
+          1 1 1 // amplitude dampingconstant resonantfrequency
+          1 1 // valuestatic valueinfinity
+          1 // valuestatic
+        end
+      end
+      0 4 0 100 2 // sensorminwavelength sensortimeundersample sensorintegrateflux sensorspectrumrange sensorspectrumstepsfac
+      2 500 0 1 // fourierspec fourierstart fourierlength fourierwindow
+      begin <pdScannerParameters(1.0)>
+        0 // scannerenabled
+        "x" // scanvariablename
+        0 1 0.1 // scanvariablefrom scanvariableto scanvariablestep
+        0 // numscanneractions
+      end
+      begin <pdActiveFDTDParameters(1.2)>
+        1 // carrieraccelfactor
+        1 // carrierspatialresolution
+        1e-020 // initialcarrierdensity
+      end
+    end
+    begin <pdFDParameters(1.4)>
+      1 0.05 0.98 1.55 // discretisation resolution priority wavelength
+      1 1 1 1 // boundaryconditionsleft boundaryconditionsright boundaryconditionsbottom boundaryconditionstop
+      1 1 1 1 // pmlthicknessleft pmlthicknessright pmlthicknessbottom pmlthicknesstop
+      begin <pdScannerParameters(1.0)>
+        0 // scannerenabled
+        "x" // scanvariablename
+        0 1 0.1 // scanvariablefrom scanvariableto scanvariablestep
+        0 // numscanneractions
+      end
+    end
+    0 // mlengineparameters
+    0 // growall
+    1 1 0 1 1 1 1 0 0 0 // background3dspec background3drix background3dalpha background3dpermeability background3drixx background3drixyy background3drixzz background3drixxy background3drixxz background3drixyz
+    "" // materialname
+    0 0 0 0 // hasxparam hasyparam xparam yparam
+    1 1 0 1 1 1 1 0 0 0 // background2dspec background2drix background2dalpha background2dpermeability background2drixx background2drixyy background2drixzz background2drixxy background2drixxz background2drixyz
+    "" // materialname
+    0 0 0 0 // hasxparam hasyparam xparam yparam
+    6 // refsensorindex
+    0 1 // computationallayervisible instrumentlayervisible
+    1 // constraintlayervisible
+    1 // sectionlayervisible
+    0 0 // structurelayervisible fieldlayervisible
+    0 // carrierlayervisible
+    1 0 0 1.000000 1.000000 // grid... shown linesshown linesminorshown spacingz spacingx
+    0 0.100000 0.100000 // snap... enabled spacingz spacingx
+  end
+  begin <PcDevice(1.19)> "Defect Array - Active"
+    -1.094 5.118462 -3.371365 3.3985305 // zmin zmax xmin xmax
+    25 // temperature
+    "refbase-membrane.mat" // materialsdatabase
+    begin <pdObjectList(1.0)> "PhysicalLayers"
+      begin <pdPhysicalLayer(1.3)>
+        "AirBottom" // name
+        0.2 // thickness
+        0 // graded
+        1 1 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        88 88 176 1 1 // red green blue shading visible
+      end
+      begin <pdPhysicalLayer(1.3)>
+        "InP" // name
+        0.2 // thickness
+        0 // graded
+        3 3.21 0 1 3.21 3.21 3.21 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "InPGain" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 // active
+        1 // trueactivethickness
+        176 88 88 1 1 // red green blue shading visible
+      end
+      begin <pdPhysicalLayer(1.3)>
+        "AirTop" // name
+        0.2 // thickness
+        0 // graded
+        1 1 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        176 88 176 1 1 // red green blue shading visible
+      end
+    end
+    begin <pdObjectList(1.0)> "ObjectLayers"
+      begin <pdMaskLayer(1.8)>
+        "InP (active)" // name
+        1 1 0 // operation inverse fillgraded
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 0 1 // topspec toplayerindex topy
+        1 0 1 1 // bottomspec bottomlayerindex bottomy depth
+        1 0 0 1 // etchstopspec etchstoplayerindex etchstopy etchdepth
+        1 5 0.15 0 0 0 0 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+        "x" // profilegenericfunction
+        1 0 // perform2d mask2dgraded
+        3 1.44 1297173.7 1 1.44 1.44 1.44 0 0 0 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+        "aluminium" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        0 0 176 1 1 // red green blue shading visible
+      end
+      begin <pdMaskLayer(1.8)>
+        "InP (edge)" // name
+        3 1 0 // operation inverse fillgraded
+        1 3.21 0 1 2.5 2.5 2.5 0 0 0 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2 1 // topspec toplayerindex topy
+        1 0 1 1 // bottomspec bottomlayerindex bottomy depth
+        1 1 0 1 // etchstopspec etchstoplayerindex etchstopy etchdepth
+        1 5 0.15 0 0 0 0 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+        "x" // profilegenericfunction
+        1 0 // perform2d mask2dgraded
+        1 3.21 0 1 2.5 2.5 2.5 0 0 0 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        64 64 255 1 1 // red green blue shading visible
+      end
+      begin <PcAtomObject3DLayer(1.1)>
+        "3D Atom Layer" // name
+        0 // grading
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        160 0 160 1 1 // red green blue shading visible
+      end
+      begin <PcAtomMaskLayer(1.8)>
+        "Atom Layer" // name
+        2 0 // operation fillgraded
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 0 1 // topspec toplayerindex topy
+        1 0 1 1 // bottomspec bottomlayerindex bottomy depth
+        1 0 0 1 // etchstopspec etchstoplayerindex etchstopy etchdepth
+        1 5 0.15 0 0 0 0 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+        "x" // profilegenericfunction
+        1 0 // perform2d mask2dgraded
+        1 1 0 1 1 1 1 0 0 0 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 1 0 1 1 1 1 0 0 0 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        255 255 255 1 1 // red green blue shading visible
+      end
+    end
+    4 // atomobject2dlayerstartindex
+    begin <pdObjectList(1.0)> "PaletteAtoms2D"
+      begin <PcAtom(1.6)>
+        ELLIPSE(0.175,0.175) // width, height
+        "Ellipse" // name
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        4 // objectlayerindex
+        1 // useobjectlayercolour
+      end
+      begin <PcAtom(1.6)>
+        RECTANGLE(0.3,0.3) // width, height
+        "Rectangle" // name
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        4 // objectlayerindex
+        1 // useobjectlayercolour
+      end
+      begin <PcAtom(1.6)>
+        REGPOLY(6,90,0.3,0.3) // numvertices, angle, width, height
+        "RegPoly" // name
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        4 // objectlayerindex
+        1 // useobjectlayercolour
+      end
+      begin <PcAtom(1.6)>
+        POLYGON(-0.15,-0.15,0.15,-0.15,0,0.15) // point1x, point1y, point2x, point2y, ...
+        "Polygon" // name
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        4 // objectlayerindex
+        1 // useobjectlayercolour
+      end
+    end
+    begin <pdObjectList(1.0)> "NonPaletteAtoms2D"
+    end
+    begin <pdObjectList(1.0)> "PaletteAtoms3D"
+      begin <PcAtom(1.6)>
+        ELLIPSE(0.3,0.3) // width, height
+        "Ellipsoid" // name
+        0.3 // sizey
+        1 1 0 1 1 1 1 0 0 0 // hole3dspec hole3drix hole3dalpha hole3dpermeability hole3drixx hole3drixyy hole3drixzz hole3drixxy hole3drixxz hole3drixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        3 // objectlayerindex
+        0 255 255 255 // useobjectlayercolour red green blue
+      end
+    end
+    begin <pdObjectList(1.0)> "Objects"
+      begin <FsRectangle(1.2)>
+        2 0.004948 0 // positionz positionx angle
+        1 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        6 6.752625 // sizez sizex
+        begin <PcLattice2D(1.0)>
+          0.365 0.365 0 60 2.1825 -0.004948 // latticeconstant1 latticeconstant2 latticeangle1 latticeangle2 latticeoriginz latticeoriginx
+          0 // numunitcells
+          340 // numlatticeatoms
+          // ispaletteatom atomindex latticepointn latticepointp offsetz offsetx offsetangle
+          1 1 -8 -4 0 0 0
+          1 1 -7 -4 0 0 0
+          1 1 -6 -4 0 0 0
+          1 1 -5 -4 0 0 0
+          1 1 -4 -4 0 0 0
+          1 1 -3 -4 0 0 0
+          1 1 -2 -4 0 0 0
+          1 1 -1 -4 0 0 0
+          1 1 0 -4 0 0 0
+          1 1 1 -4 0 0 0
+          1 1 -8 -3 0 0 0
+          1 1 -7 -3 0 0 0
+          1 1 -5 -3 0 0 0
+          1 1 -4 -3 0 0 0
+          1 1 -2 -3 0 0 0
+          1 1 -1 -3 0 0 0
+          1 1 0 -3 0 0 0
+          1 1 1 -3 0 0 0
+          1 1 -9 -2 0 0 0
+          1 1 -8 -2 0 0 0
+          1 1 -7 -2 0 0 0
+          1 1 -6 -2 0 0 0
+          1 1 -5 -2 0 0 0
+          1 1 -4 -2 0 0 0
+          1 1 -3 -2 0 0 0
+          1 1 -2 -2 0 0 0
+          1 1 -1 -2 0 0 0
+          1 1 0 -2 0 0 0
+          1 1 -9 -1 0 0 0
+          1 1 -8 -1 0 0 0
+          1 1 -7 -1 0 0 0
+          1 1 -6 -1 0 0 0
+          1 1 -5 -1 0 0 0
+          1 1 -4 -1 0 0 0
+          1 1 -3 -1 0 0 0
+          1 1 -2 -1 0 0 0
+          1 1 -1 -1 0 0 0
+          1 1 0 -1 0 0 0
+          1 1 -10 0 0 0 0
+          1 1 -8 0 0 0 0
+          1 1 -7 0 0 0 0
+          1 1 -4 0 0 0 0
+          1 1 -2 0 0 0 0
+          1 1 -1 0 0 0 0
+          1 1 -10 1 0 0 0
+          1 1 -9 1 0 0 0
+          1 1 -8 1 0 0 0
+          1 1 -7 1 0 0 0
+          1 1 -6 1 0 0 0
+          1 1 -5 1 0 0 0
+          1 1 -4 1 0 0 0
+          1 1 -3 1 0 0 0
+          1 1 -2 1 0 0 0
+          1 1 -1 1 0 0 0
+          1 1 -11 2 0 0 0
+          1 1 -10 2 0 0 0
+          1 1 -9 2 0 0 0
+          1 1 -8 2 0 0 0
+          1 1 -7 2 0 0 0
+          1 1 -6 2 0 0 0
+          1 1 -5 2 0 0 0
+          1 1 -4 2 0 0 0
+          1 1 -3 2 0 0 0
+          1 1 -2 2 0 0 0
+          1 1 -11 3 0 0 0
+          1 1 -10 3 0 0 0
+          1 1 -8 3 0 0 0
+          1 1 -7 3 0 0 0
+          1 1 -5 3 0 0 0
+          1 1 -4 3 0 0 0
+          1 1 -3 3 0 0 0
+          1 1 -2 3 0 0 0
+          1 1 -12 4 0 0 0
+          1 1 -11 4 0 0 0
+          1 1 -10 4 0 0 0
+          1 1 -9 4 0 0 0
+          1 1 -8 4 0 0 0
+          1 1 -7 4 0 0 0
+          1 1 -6 4 0 0 0
+          1 1 -5 4 0 0 0
+          1 1 -4 4 0 0 0
+          1 1 -3 4 0 0 0
+          1 1 -5 0 0 0 0
+          1 1 -9 -4 0 0 0
+          1 1 -10 -2 0 0 0
+          1 1 -11 0 0 0 0
+          1 1 -12 2 0 0 0
+          1 1 -13 4 0 0 0
+          1 1 -12 3 0 0 0
+          1 1 -11 1 0 0 0
+          1 1 -10 -1 0 0 0
+          1 1 -9 -3 0 0 0
+          1 1 -6 -10 0 0 0
+          1 1 -5 -10 0 0 0
+          1 1 -4 -10 0 0 0
+          1 1 -3 -10 0 0 0
+          1 1 -2 -10 0 0 0
+          1 1 -1 -10 0 0 0
+          1 1 0 -10 0 0 0
+          1 1 1 -10 0 0 0
+          1 1 2 -10 0 0 0
+          1 1 3 -10 0 0 0
+          1 1 4 -10 0 0 0
+          1 1 -6 -9 0 0 0
+          1 1 -5 -9 0 0 0
+          1 1 -4 -9 0 0 0
+          1 1 -3 -9 0 0 0
+          1 1 -2 -9 0 0 0
+          1 1 -1 -9 0 0 0
+          1 1 0 -9 0 0 0
+          1 1 1 -9 0 0 0
+          1 1 2 -9 0 0 0
+          1 1 3 -9 0 0 0
+          1 1 -7 -8 0 0 0
+          1 1 -6 -8 0 0 0
+          1 1 -5 -8 0 0 0
+          1 1 -4 -8 0 0 0
+          1 1 -3 -8 0 0 0
+          1 1 -2 -8 0 0 0
+          1 1 -1 -8 0 0 0
+          1 1 0 -8 0 0 0
+          1 1 1 -8 0 0 0
+          1 1 2 -8 0 0 0
+          1 1 3 -8 0 0 0
+          1 1 -7 -7 0 0 0
+          1 1 -6 -7 0 0 0
+          1 1 -5 -7 0 0 0
+          1 1 -4 -7 0 0 0
+          1 1 -3 -7 0 0 0
+          1 1 -2 -7 0 0 0
+          1 1 -1 -7 0 0 0
+          1 1 0 -7 0 0 0
+          1 1 1 -7 0 0 0
+          1 1 2 -7 0 0 0
+          1 1 -8 -6 0 0 0
+          1 1 -7 -6 0 0 0
+          1 1 -6 -6 0 0 0
+          1 1 -5 -6 0 0 0
+          1 1 -4 -6 0 0 0
+          1 1 -3 -6 0 0 0
+          1 1 -2 -6 0 0 0
+          1 1 -1 -6 0 0 0
+          1 1 0 -6 0 0 0
+          1 1 1 -6 0 0 0
+          1 1 2 -6 0 0 0
+          1 1 -8 -5 0 0 0
+          1 1 -7 -5 0 0 0
+          1 1 -6 -5 0 0 0
+          1 1 -5 -5 0 0 0
+          1 1 -4 -5 0 0 0
+          1 1 -3 -5 0 0 0
+          1 1 -2 -5 0 0 0
+          1 1 -1 -5 0 0 0
+          1 1 0 -5 0 0 0
+          1 1 1 -5 0 0 0
+          1 1 -13 5 0 0 0
+          1 1 -12 5 0 0 0
+          1 1 -11 5 0 0 0
+          1 1 -10 5 0 0 0
+          1 1 -9 5 0 0 0
+          1 1 -8 5 0 0 0
+          1 1 -7 5 0 0 0
+          1 1 -6 5 0 0 0
+          1 1 -5 5 0 0 0
+          1 1 -4 5 0 0 0
+          1 1 -14 6 0 0 0
+          1 1 -13 6 0 0 0
+          1 1 -12 6 0 0 0
+          1 1 -11 6 0 0 0
+          1 1 -10 6 0 0 0
+          1 1 -9 6 0 0 0
+          1 1 -8 6 0 0 0
+          1 1 -7 6 0 0 0
+          1 1 -6 6 0 0 0
+          1 1 -5 6 0 0 0
+          1 1 -4 6 0 0 0
+          1 1 -14 7 0 0 0
+          1 1 -13 7 0 0 0
+          1 1 -12 7 0 0 0
+          1 1 -11 7 0 0 0
+          1 1 -10 7 0 0 0
+          1 1 -9 7 0 0 0
+          1 1 -8 7 0 0 0
+          1 1 -7 7 0 0 0
+          1 1 -6 7 0 0 0
+          1 1 -5 7 0 0 0
+          1 1 -15 8 0 0 0
+          1 1 -14 8 0 0 0
+          1 1 -13 8 0 0 0
+          1 1 -12 8 0 0 0
+          1 1 -11 8 0 0 0
+          1 1 -10 8 0 0 0
+          1 1 -9 8 0 0 0
+          1 1 -8 8 0 0 0
+          1 1 -7 8 0 0 0
+          1 1 -6 8 0 0 0
+          1 1 -5 8 0 0 0
+          1 1 -15 9 0 0 0
+          1 1 -14 9 0 0 0
+          1 1 -13 9 0 0 0
+          1 1 -12 9 0 0 0
+          1 1 -11 9 0 0 0
+          1 1 -10 9 0 0 0
+          1 1 -9 9 0 0 0
+          1 1 -8 9 0 0 0
+          1 1 -7 9 0 0 0
+          1 1 -6 9 0 0 0
+          1 1 -16 10 0 0 0
+          1 1 -15 10 0 0 0
+          1 1 -14 10 0 0 0
+          1 1 -13 10 0 0 0
+          1 1 -12 10 0 0 0
+          1 1 -11 10 0 0 0
+          1 1 -10 10 0 0 0
+          1 1 -9 10 0 0 0
+          1 1 -8 10 0 0 0
+          1 1 -7 10 0 0 0
+          1 1 -6 10 0 0 0
+          1 1 -8 -10 0 0 0
+          1 1 -7 -10 0 0 0
+          1 1 5 -10 0 0 0
+          1 1 6 -10 0 0 0
+          1 1 7 -10 0 0 0
+          1 1 -8 -9 0 0 0
+          1 1 -7 -9 0 0 0
+          1 1 4 -9 0 0 0
+          1 1 5 -9 0 0 0
+          1 1 6 -9 0 0 0
+          1 1 -9 -8 0 0 0
+          1 1 -8 -8 0 0 0
+          1 1 4 -8 0 0 0
+          1 1 5 -8 0 0 0
+          1 1 6 -8 0 0 0
+          1 1 -9 -7 0 0 0
+          1 1 -8 -7 0 0 0
+          1 1 3 -7 0 0 0
+          1 1 4 -7 0 0 0
+          1 1 5 -7 0 0 0
+          1 1 -10 -6 0 0 0
+          1 1 -9 -6 0 0 0
+          1 1 3 -6 0 0 0
+          1 1 4 -6 0 0 0
+          1 1 5 -6 0 0 0
+          1 1 -10 -5 0 0 0
+          1 1 -9 -5 0 0 0
+          1 1 2 -5 0 0 0
+          1 1 3 -5 0 0 0
+          1 1 4 -5 0 0 0
+          1 1 -11 -4 0 0 0
+          1 1 -10 -4 0 0 0
+          1 1 2 -4 0 0 0
+          1 1 3 -4 0 0 0
+          1 1 4 -4 0 0 0
+          1 1 -11 -3 0 0 0
+          1 1 -10 -3 0 0 0
+          1 1 2 -3 0 0 0
+          1 1 3 -3 0 0 0
+          1 1 -12 -2 0 0 0
+          1 1 -11 -2 0 0 0
+          1 1 1 -2 0 0 0
+          1 1 2 -2 0 0 0
+          1 1 3 -2 0 0 0
+          1 1 -12 -1 0 0 0
+          1 1 -11 -1 0 0 0
+          1 1 1 -1 0 0 0
+          1 1 2 -1 0 0 0
+          1 1 -13 0 0 0 0
+          1 1 -12 0 0 0 0
+          1 1 0 0 0 0 0
+          1 1 1 0 0 0 0
+          1 1 2 0 0 0 0
+          1 1 -13 1 0 0 0
+          1 1 -12 1 0 0 0
+          1 1 0 1 0 0 0
+          1 1 1 1 0 0 0
+          1 1 -14 2 0 0 0
+          1 1 -13 2 0 0 0
+          1 1 -1 2 0 0 0
+          1 1 0 2 0 0 0
+          1 1 1 2 0 0 0
+          1 1 -14 3 0 0 0
+          1 1 -13 3 0 0 0
+          1 1 -1 3 0 0 0
+          1 1 0 3 0 0 0
+          1 1 -15 4 0 0 0
+          1 1 -14 4 0 0 0
+          1 1 -2 4 0 0 0
+          1 1 -1 4 0 0 0
+          1 1 0 4 0 0 0
+          1 1 -15 5 0 0 0
+          1 1 -14 5 0 0 0
+          1 1 -3 5 0 0 0
+          1 1 -2 5 0 0 0
+          1 1 -1 5 0 0 0
+          1 1 -16 6 0 0 0
+          1 1 -15 6 0 0 0
+          1 1 -3 6 0 0 0
+          1 1 -2 6 0 0 0
+          1 1 -1 6 0 0 0
+          1 1 -16 7 0 0 0
+          1 1 -15 7 0 0 0
+          1 1 -4 7 0 0 0
+          1 1 -3 7 0 0 0
+          1 1 -2 7 0 0 0
+          1 1 -17 8 0 0 0
+          1 1 -16 8 0 0 0
+          1 1 -4 8 0 0 0
+          1 1 -3 8 0 0 0
+          1 1 -2 8 0 0 0
+          1 1 -17 9 0 0 0
+          1 1 -16 9 0 0 0
+          1 1 -5 9 0 0 0
+          1 1 -4 9 0 0 0
+          1 1 -3 9 0 0 0
+          1 1 -18 10 0 0 0
+          1 1 -17 10 0 0 0
+          1 1 -5 10 0 0 0
+          1 1 -4 10 0 0 0
+          1 1 -3 10 0 0 0
+          1 1 -9 -10 0 0 0
+          1 1 -10 -8 0 0 0
+          1 1 -11 -6 0 0 0
+          1 1 -12 -4 0 0 0
+          1 1 -13 -2 0 0 0
+          1 1 -14 0 0 0 0
+          1 1 -15 2 0 0 0
+          1 1 -16 4 0 0 0
+          1 1 -17 6 0 0 0
+          1 1 -18 8 0 0 0
+          1 1 -19 10 0 0 0
+          1 1 -9 -9 0 0 0
+          1 1 -10 -7 0 0 0
+          1 1 -11 -5 0 0 0
+          1 1 -12 -3 0 0 0
+          1 1 -13 -1 0 0 0
+          1 1 -14 1 0 0 0
+          1 1 -15 3 0 0 0
+          1 1 -16 5 0 0 0
+          1 1 -17 7 0 0 0
+          1 1 -18 9 0 0 0
+        end
+      end
+      begin <pdEndSection(1.0)>
+        2.121364 // positionz
+      end
+      begin <FsRectangle(1.2)>
+        5.059231 0.013583 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        0.118462 6.769895 // sizez sizex
+      end
+      begin <FsRectangle(1.2)>
+        -1.047 0.013583 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        0.094 6.769895 // sizez sizex
+      end
+      begin <pdDipoleExcitor(1.2)>
+        2 0 0 // positionz positionx angle
+        0 0 // sizez sizex
+        4 2 1 // ymaxspec ymaxlayer ymaxcoordinate
+        4 2 1 // yminspec yminlayer ymincoordinate
+        3 2 20 0 // timeenvshape timeenvwidthspec timeenvwidth timeenvdelay
+        "" // timeenvfunction
+        1 1.4 "" 0 1.000000e-006 // chirpswitch wavelength endwavelength phase power
+        "" // phasefunction
+        1 1 1 100 // polarisation coherent coherencespec coherence
+      end
+      begin <pdSensorZX(1.3)>
+        2.2 0 0 // positionz positionx angle
+        0.15 // sizex
+        3 2 1 // ymaxspec ymaxlayer ymaxcoordinate
+        5 2 1 // yminspec yminlayer ymincoordinate
+        "Cavity" // name
+        1 // transformtype
+      end
+      begin <pdSideSection(1.0)>
+        -0.341513 // positionx
+      end
+      begin <pdSensorY(1.3)>
+        2 0 0 // positionz positionx angle
+        3 3 // sizez sizex
+        1 0 1 // ypositionspec ypositionlayer ypositioncoordinate
+        "Top_1_1" // name
+        1 // transformtype
+        1 // upward
+      end
+      begin <FsRectangle(1.2)>
+        2.012231 -3.295659 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        6.212462 0.151412 // sizez sizex
+      end
+      begin <FsRectangle(1.2)>
+        2.012231 3.322824 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        6.212462 0.151412 // sizez sizex
+      end
+    end
+    begin <pdObjectList(1.0)> "Constraints"
+    end
+    begin <pdFDTDParameters(1.17)>
+      3 2 7000 0 // numdimensions durationspec duration centralwavelength
+      1 0.02 // gridtype gridspacing
+      8 1 1 2 // pmlthickness pmlstructure pmlfactor pmlexponent
+      1 // boundarycondition
+      0 // overridexneg
+      0 // overridexpos
+      0 // overrideyneg
+      0 // overrideypos
+      0 // overridezneg
+      0 // overridezpos
+      0.4 1 10 10 // minwavelength maxwavelength mixingtolerance epsilontolerance
+      0.05 10000 0.05 0.01 // gradingrixtolerance gradingalphatolerance gradingpermeabilitytolerance gradingparamtolerance
+      begin <pdFDTDMaterialParamsDatabase(1.1)>
+        2 // numentries
+        begin <pdFDTDMaterialParameters(1.5)>
+          "aluminium" // materialname
+          0 0 0 0 // hasxparam hasyparam xparam yparam
+          0 0 4 0 0 1 // epsnonlinear epsilontolerance epsmodel munonlinear mutolerance mumodel 
+          1 // numpoles
+          1 1 // amplitude relaxationtime
+          1 1 // valuestatic valueinfinity
+          1 1 // collisionfrequency plasmafrequency
+          1 // numpoles
+          -100000 0.5 1573.446575 // amplitude dampingconstant resonantfrequency
+          10.3041 1 // valuestatic valueinfinity
+          1 // valuestatic
+          1 // gainmultiplier
+          1 // numpoles
+          1 1 // amplitude relaxationtime
+          1 1 // valuestatic valueinfinity
+          1 1 // collisionfrequency plasmafrequency
+          1 // numpoles
+          1 1 1 // amplitude dampingconstant resonantfrequency
+          1 1 // valuestatic valueinfinity
+          1 // valuestatic
+        end
+        begin <pdFDTDMaterialParameters(1.5)>
+          "InPGain" // materialname
+          0 0 0 0 // hasxparam hasyparam xparam yparam
+          0 0 6 0 0 1 // epsnonlinear epsilontolerance epsmodel munonlinear mutolerance mumodel 
+          1 // numpoles
+          1 1 // amplitude relaxationtime
+          1 1 // valuestatic valueinfinity
+          1 1 // collisionfrequency plasmafrequency
+          1 // numpoles
+          1 1 1 // amplitude dampingconstant resonantfrequency
+          1 1 // valuestatic valueinfinity
+          1 // valuestatic
+          1 // gainmultiplier
+          1 // numpoles
+          1 1 // amplitude relaxationtime
+          1 1 // valuestatic valueinfinity
+          1 1 // collisionfrequency plasmafrequency
+          1 // numpoles
+          1 1 1 // amplitude dampingconstant resonantfrequency
+          1 1 // valuestatic valueinfinity
+          1 // valuestatic
+        end
+      end
+      0 8 0 100 2 // sensorminwavelength sensortimeundersample sensorintegrateflux sensorspectrumrange sensorspectrumstepsfac
+      2 500 0 1 // fourierspec fourierstart fourierlength fourierwindow
+      begin <pdScannerParameters(1.0)>
+        0 // scannerenabled
+        "x" // scanvariablename
+        0 1 0.1 // scanvariablefrom scanvariableto scanvariablestep
+        0 // numscanneractions
+      end
+      begin <pdActiveFDTDParameters(1.2)>
+        1 // carrieraccelfactor
+        1 // carrierspatialresolution
+        1e-020 // initialcarrierdensity
+      end
+    end
+    begin <pdFDParameters(1.4)>
+      1 0.05 0.98 1.55 // discretisation resolution priority wavelength
+      1 1 1 1 // boundaryconditionsleft boundaryconditionsright boundaryconditionsbottom boundaryconditionstop
+      1 1 1 1 // pmlthicknessleft pmlthicknessright pmlthicknessbottom pmlthicknesstop
+      begin <pdScannerParameters(1.0)>
+        0 // scannerenabled
+        "x" // scanvariablename
+        0 1 0.1 // scanvariablefrom scanvariableto scanvariablestep
+        0 // numscanneractions
+      end
+    end
+    0 // mlengineparameters
+    0 // growall
+    1 1 0 1 1 1 1 0 0 0 // background3dspec background3drix background3dalpha background3dpermeability background3drixx background3drixyy background3drixzz background3drixxy background3drixxz background3drixyz
+    "" // materialname
+    0 0 0 0 // hasxparam hasyparam xparam yparam
+    1 1 0 1 1 1 1 0 0 0 // background2dspec background2drix background2dalpha background2dpermeability background2drixx background2drixyy background2drixzz background2drixxy background2drixxz background2drixyz
+    "" // materialname
+    0 0 0 0 // hasxparam hasyparam xparam yparam
+    6 // refsensorindex
+    1 1 // computationallayervisible instrumentlayervisible
+    1 // constraintlayervisible
+    0 // sectionlayervisible
+    0 0 // structurelayervisible fieldlayervisible
+    0 // carrierlayervisible
+    1 0 0 1.000000 1.000000 // grid... shown linesshown linesminorshown spacingz spacingx
+    0 0.100000 0.100000 // snap... enabled spacingz spacingx
+  end
+  begin <PcDevice(1.19)> "Single Defect - Passive"
+    -5.000000001e-007 4.0900005 -1.4936695 1.500001 // zmin zmax xmin xmax
+    25 // temperature
+    "refbase-membrane.mat" // materialsdatabase
+    begin <pdObjectList(1.0)> "PhysicalLayers"
+      begin <pdPhysicalLayer(1.3)>
+        "AirBottom" // name
+        0.2 // thickness
+        0 // graded
+        1 1 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        88 88 176 1 1 // red green blue shading visible
+      end
+      begin <pdPhysicalLayer(1.3)>
+        "InP" // name
+        0.2 // thickness
+        0 // graded
+        1 3.21 0 1 3.21 3.21 3.21 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 // active
+        1 // trueactivethickness
+        88 88 176 1 1 // red green blue shading visible
+      end
+      begin <pdPhysicalLayer(1.3)>
+        "AirTop" // name
+        0.2 // thickness
+        0 // graded
+        1 1 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        176 88 176 1 1 // red green blue shading visible
+      end
+    end
+    begin <pdObjectList(1.0)> "ObjectLayers"
+      begin <pdMaskLayer(1.8)>
+        "InP (active)" // name
+        1 1 0 // operation inverse fillgraded
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 0 1 // topspec toplayerindex topy
+        1 0 1 1 // bottomspec bottomlayerindex bottomy depth
+        1 0 0 1 // etchstopspec etchstoplayerindex etchstopy etchdepth
+        1 5 0.15 0 0 0 0 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+        "x" // profilegenericfunction
+        1 0 // perform2d mask2dgraded
+        3 1.44 1297173.7 1 1.44 1.44 1.44 0 0 0 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+        "aluminium" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        0 0 176 1 1 // red green blue shading visible
+      end
+      begin <pdMaskLayer(1.8)>
+        "InP (edge)" // name
+        3 1 0 // operation inverse fillgraded
+        1 3.21 0 1 2.5 2.5 2.5 0 0 0 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2 1 // topspec toplayerindex topy
+        1 0 1 1 // bottomspec bottomlayerindex bottomy depth
+        1 1 0 1 // etchstopspec etchstoplayerindex etchstopy etchdepth
+        1 5 0.15 0 0 0 0 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+        "x" // profilegenericfunction
+        1 0 // perform2d mask2dgraded
+        1 3.21 0 1 2.5 2.5 2.5 0 0 0 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        64 64 255 1 1 // red green blue shading visible
+      end
+      begin <PcAtomObject3DLayer(1.1)>
+        "3D Atom Layer" // name
+        0 // grading
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        160 0 160 1 1 // red green blue shading visible
+      end
+      begin <PcAtomMaskLayer(1.8)>
+        "Atom Layer" // name
+        2 0 // operation fillgraded
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 0 1 // topspec toplayerindex topy
+        1 0 1 1 // bottomspec bottomlayerindex bottomy depth
+        1 0 0 1 // etchstopspec etchstoplayerindex etchstopy etchdepth
+        1 5 0.15 0 0 0 0 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+        "x" // profilegenericfunction
+        1 0 // perform2d mask2dgraded
+        1 1 0 1 1 1 1 0 0 0 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 1 0 1 1 1 1 0 0 0 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        255 255 255 1 1 // red green blue shading visible
+      end
+    end
+    4 // atomobject2dlayerstartindex
+    begin <pdObjectList(1.0)> "PaletteAtoms2D"
+      begin <PcAtom(1.6)>
+        ELLIPSE(0.175,0.175) // width, height
+        "Ellipse" // name
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        4 // objectlayerindex
+        1 // useobjectlayercolour
+      end
+      begin <PcAtom(1.6)>
+        RECTANGLE(0.3,0.3) // width, height
+        "Rectangle" // name
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        4 // objectlayerindex
+        1 // useobjectlayercolour
+      end
+      begin <PcAtom(1.6)>
+        REGPOLY(6,90,0.3,0.3) // numvertices, angle, width, height
+        "RegPoly" // name
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        4 // objectlayerindex
+        1 // useobjectlayercolour
+      end
+      begin <PcAtom(1.6)>
+        POLYGON(-0.15,-0.15,0.15,-0.15,0,0.15) // point1x, point1y, point2x, point2y, ...
+        "Polygon" // name
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        4 // objectlayerindex
+        1 // useobjectlayercolour
+      end
+    end
+    begin <pdObjectList(1.0)> "NonPaletteAtoms2D"
+    end
+    begin <pdObjectList(1.0)> "PaletteAtoms3D"
+      begin <PcAtom(1.6)>
+        ELLIPSE(0.3,0.3) // width, height
+        "Ellipsoid" // name
+        0.3 // sizey
+        1 1 0 1 1 1 1 0 0 0 // hole3dspec hole3drix hole3dalpha hole3dpermeability hole3drixx hole3drixyy hole3drixzz hole3drixxy hole3drixxz hole3drixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        3 // objectlayerindex
+        0 255 255 255 // useobjectlayercolour red green blue
+      end
+    end
+    begin <pdObjectList(1.0)> "Objects"
+      begin <FsRectangle(1.2)>
+        2 0.003165 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        4 2.993669 // sizez sizex
+        begin <PcLattice2D(1.0)>
+          0.365 0.365 0 60 2.1825 -0.003165 // latticeconstant1 latticeconstant2 latticeangle1 latticeangle2 latticeoriginz latticeoriginx
+          0 // numunitcells
+          98 // numlatticeatoms
+          // ispaletteatom atomindex latticepointn latticepointp offsetz offsetx offsetangle
+          1 1 -8 -4 0 0 0
+          1 1 -7 -4 0 0 0
+          1 1 -6 -4 0 0 0
+          1 1 -5 -4 0 0 0
+          1 1 -4 -4 0 0 0
+          1 1 -3 -4 0 0 0
+          1 1 -2 -4 0 0 0
+          1 1 -1 -4 0 0 0
+          1 1 0 -4 0 0 0
+          1 1 1 -4 0 0 0
+          1 1 -8 -3 0 0 0
+          1 1 -7 -3 0 0 0
+          1 1 -6 -3 0 0 0
+          1 1 -5 -3 0 0 0
+          1 1 -4 -3 0 0 0
+          1 1 -3 -3 0 0 0
+          1 1 -2 -3 0 0 0
+          1 1 -1 -3 0 0 0
+          1 1 0 -3 0 0 0
+          1 1 1 -3 0 0 0
+          1 1 -9 -2 0 0 0
+          1 1 -8 -2 0 0 0
+          1 1 -7 -2 0 0 0
+          1 1 -6 -2 0 0 0
+          1 1 -5 -2 0 0 0
+          1 1 -4 -2 0 0 0
+          1 1 -3 -2 0 0 0
+          1 1 -2 -2 0 0 0
+          1 1 -1 -2 0 0 0
+          1 1 0 -2 0 0 0
+          1 1 -9 -1 0 0 0
+          1 1 -8 -1 0 0 0
+          1 1 -7 -1 0 0 0
+          1 1 -6 -1 0 0 0
+          1 1 -5 -1 0 0 0
+          1 1 -4 -1 0 0 0
+          1 1 -3 -1 0 0 0
+          1 1 -2 -1 0 0 0
+          1 1 -1 -1 0 0 0
+          1 1 0 -1 0 0 0
+          1 1 -10 0 0 0 0
+          1 1 -9 0 0 0 0
+          1 1 -8 0 0 0 0
+          1 1 -7 0 0 0 0
+          1 1 -4 0 0 0 0
+          1 1 -3 0 0 0 0
+          1 1 -2 0 0 0 0
+          1 1 -1 0 0 0 0
+          1 1 -10 1 0 0 0
+          1 1 -9 1 0 0 0
+          1 1 -8 1 0 0 0
+          1 1 -7 1 0 0 0
+          1 1 -6 1 0 0 0
+          1 1 -5 1 0 0 0
+          1 1 -4 1 0 0 0
+          1 1 -3 1 0 0 0
+          1 1 -2 1 0 0 0
+          1 1 -1 1 0 0 0
+          1 1 -11 2 0 0 0
+          1 1 -10 2 0 0 0
+          1 1 -9 2 0 0 0
+          1 1 -8 2 0 0 0
+          1 1 -7 2 0 0 0
+          1 1 -6 2 0 0 0
+          1 1 -5 2 0 0 0
+          1 1 -4 2 0 0 0
+          1 1 -3 2 0 0 0
+          1 1 -2 2 0 0 0
+          1 1 -11 3 0 0 0
+          1 1 -10 3 0 0 0
+          1 1 -9 3 0 0 0
+          1 1 -8 3 0 0 0
+          1 1 -7 3 0 0 0
+          1 1 -6 3 0 0 0
+          1 1 -5 3 0 0 0
+          1 1 -4 3 0 0 0
+          1 1 -3 3 0 0 0
+          1 1 -2 3 0 0 0
+          1 1 -12 4 0 0 0
+          1 1 -11 4 0 0 0
+          1 1 -10 4 0 0 0
+          1 1 -9 4 0 0 0
+          1 1 -8 4 0 0 0
+          1 1 -7 4 0 0 0
+          1 1 -6 4 0 0 0
+          1 1 -5 4 0 0 0
+          1 1 -4 4 0 0 0
+          1 1 -3 4 0 0 0
+          1 1 -5 0 0 0 0
+          1 1 -9 -4 0 0 0
+          1 1 -10 -2 0 0 0
+          1 1 -11 0 0 0 0
+          1 1 -12 2 0 0 0
+          1 1 -13 4 0 0 0
+          1 1 -12 3 0 0 0
+          1 1 -11 1 0 0 0
+          1 1 -10 -1 0 0 0
+          1 1 -9 -3 0 0 0
+        end
+      end
+      begin <pdEndSection(1.0)>
+        2.366374 // positionz
+      end
+      begin <FsRectangle(1.2)>
+        3.99 0.003165 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        0.2 2.993669 // sizez sizex
+      end
+      begin <FsRectangle(1.2)>
+        0.1 0.003165 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        0.2 2.993669 // sizez sizex
+      end
+      begin <pdDipoleExcitor(1.2)>
+        2 0 0 // positionz positionx angle
+        0 0 // sizez sizex
+        4 2 1 // ymaxspec ymaxlayer ymaxcoordinate
+        4 2 1 // yminspec yminlayer ymincoordinate
+        3 2 20 0 // timeenvshape timeenvwidthspec timeenvwidth timeenvdelay
+        "" // timeenvfunction
+        1 1.55 "" 0 1.000000e-006 // chirpswitch wavelength endwavelength phase power
+        "" // phasefunction
+        1 1 1 100 // polarisation coherent coherencespec coherence
+      end
+      begin <pdSensorZX(1.3)>
+        2.2 0 0 // positionz positionx angle
+        0.15 // sizex
+        3 2 1 // ymaxspec ymaxlayer ymaxcoordinate
+        5 2 1 // yminspec yminlayer ymincoordinate
+        "Cavity" // name
+        1 // transformtype
+      end
+      begin <pdSideSection(1.0)>
+        -0.000616 // positionx
+      end
+      begin <pdSensorY(1.3)>
+        2 0 0 // positionz positionx angle
+        1.5 1.5 // sizez sizex
+        1 0 1 // ypositionspec ypositionlayer ypositioncoordinate
+        "Top" // name
+        1 // transformtype
+        1 // upward
+      end
+      begin <FsRectangle(1.2)>
+        2.045 1.448166 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        4.090001 0.10367 // sizez sizex
+      end
+      begin <FsRectangle(1.2)>
+        2.045 -1.441834 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        4.090001 0.10367 // sizez sizex
+      end
+    end
+    begin <pdObjectList(1.0)> "Constraints"
+    end
+    begin <pdFDTDParameters(1.17)>
+      3 2 500 0 // numdimensions durationspec duration centralwavelength
+      1 0.02 // gridtype gridspacing
+      8 1 1 2 // pmlthickness pmlstructure pmlfactor pmlexponent
+      1 // boundarycondition
+      0 // overridexneg
+      0 // overridexpos
+      0 // overrideyneg
+      0 // overrideypos
+      0 // overridezneg
+      0 // overridezpos
+      0.4 1 10 10 // minwavelength maxwavelength mixingtolerance epsilontolerance
+      0.05 10000 0.05 0.01 // gradingrixtolerance gradingalphatolerance gradingpermeabilitytolerance gradingparamtolerance
+      begin <pdFDTDMaterialParamsDatabase(1.1)>
+        1 // numentries
+        begin <pdFDTDMaterialParameters(1.5)>
+          "aluminium" // materialname
+          0 0 0 0 // hasxparam hasyparam xparam yparam
+          0 0 4 0 0 1 // epsnonlinear epsilontolerance epsmodel munonlinear mutolerance mumodel 
+          1 // numpoles
+          1 1 // amplitude relaxationtime
+          1 1 // valuestatic valueinfinity
+          1 1 // collisionfrequency plasmafrequency
+          1 // numpoles
+          -100000 0.5 1573.446575 // amplitude dampingconstant resonantfrequency
+          10.3041 1 // valuestatic valueinfinity
+          1 // valuestatic
+          1 // gainmultiplier
+          1 // numpoles
+          1 1 // amplitude relaxationtime
+          1 1 // valuestatic valueinfinity
+          1 1 // collisionfrequency plasmafrequency
+          1 // numpoles
+          1 1 1 // amplitude dampingconstant resonantfrequency
+          1 1 // valuestatic valueinfinity
+          1 // valuestatic
+        end
+      end
+      0 4 0 100 2 // sensorminwavelength sensortimeundersample sensorintegrateflux sensorspectrumrange sensorspectrumstepsfac
+      2 50 0 1 // fourierspec fourierstart fourierlength fourierwindow
+      begin <pdScannerParameters(1.0)>
+        0 // scannerenabled
+        "x" // scanvariablename
+        0 1 0.1 // scanvariablefrom scanvariableto scanvariablestep
+        0 // numscanneractions
+      end
+      begin <pdActiveFDTDParameters(1.2)>
+        1 // carrieraccelfactor
+        1 // carrierspatialresolution
+        1e-020 // initialcarrierdensity
+      end
+    end
+    begin <pdFDParameters(1.4)>
+      1 0.05 0.98 1.55 // discretisation resolution priority wavelength
+      1 1 1 1 // boundaryconditionsleft boundaryconditionsright boundaryconditionsbottom boundaryconditionstop
+      1 1 1 1 // pmlthicknessleft pmlthicknessright pmlthicknessbottom pmlthicknesstop
+      begin <pdScannerParameters(1.0)>
+        0 // scannerenabled
+        "x" // scanvariablename
+        0 1 0.1 // scanvariablefrom scanvariableto scanvariablestep
+        0 // numscanneractions
+      end
+    end
+    0 // mlengineparameters
+    0 // growall
+    1 1 0 1 1 1 1 0 0 0 // background3dspec background3drix background3dalpha background3dpermeability background3drixx background3drixyy background3drixzz background3drixxy background3drixxz background3drixyz
+    "" // materialname
+    0 0 0 0 // hasxparam hasyparam xparam yparam
+    1 1 0 1 1 1 1 0 0 0 // background2dspec background2drix background2dalpha background2dpermeability background2drixx background2drixyy background2drixzz background2drixxy background2drixxz background2drixyz
+    "" // materialname
+    0 0 0 0 // hasxparam hasyparam xparam yparam
+    6 // refsensorindex
+    0 1 // computationallayervisible instrumentlayervisible
+    1 // constraintlayervisible
+    1 // sectionlayervisible
+    0 0 // structurelayervisible fieldlayervisible
+    0 // carrierlayervisible
+    1 0 0 1.000000 1.000000 // grid... shown linesshown linesminorshown spacingz spacingx
+    0 0.100000 0.100000 // snap... enabled spacingz spacingx
+  end
+  begin <PcDevice(1.19)> "Defect Array - Passive"
+    -1.094 5.118462 -3.371365 3.3985305 // zmin zmax xmin xmax
+    25 // temperature
+    "refbase-membrane.mat" // materialsdatabase
+    begin <pdObjectList(1.0)> "PhysicalLayers"
+      begin <pdPhysicalLayer(1.3)>
+        "AirBottom" // name
+        0.2 // thickness
+        0 // graded
+        1 1 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        88 88 176 1 1 // red green blue shading visible
+      end
+      begin <pdPhysicalLayer(1.3)>
+        "InP" // name
+        0.2 // thickness
+        0 // graded
+        1 3.21 0 1 3.21 3.21 3.21 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 // active
+        1 // trueactivethickness
+        176 88 88 1 1 // red green blue shading visible
+      end
+      begin <pdPhysicalLayer(1.3)>
+        "AirTop" // name
+        0.2 // thickness
+        0 // graded
+        1 1 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        176 88 176 1 1 // red green blue shading visible
+      end
+    end
+    begin <pdObjectList(1.0)> "ObjectLayers"
+      begin <pdMaskLayer(1.8)>
+        "InP (active)" // name
+        1 1 0 // operation inverse fillgraded
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 0 1 // topspec toplayerindex topy
+        1 0 1 1 // bottomspec bottomlayerindex bottomy depth
+        1 0 0 1 // etchstopspec etchstoplayerindex etchstopy etchdepth
+        1 5 0.15 0 0 0 0 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+        "x" // profilegenericfunction
+        1 0 // perform2d mask2dgraded
+        3 1.44 1297173.7 1 1.44 1.44 1.44 0 0 0 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+        "aluminium" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        0 0 176 1 1 // red green blue shading visible
+      end
+      begin <pdMaskLayer(1.8)>
+        "InP (edge)" // name
+        3 1 0 // operation inverse fillgraded
+        1 3.21 0 1 2.5 2.5 2.5 0 0 0 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2 1 // topspec toplayerindex topy
+        1 0 1 1 // bottomspec bottomlayerindex bottomy depth
+        1 1 0 1 // etchstopspec etchstoplayerindex etchstopy etchdepth
+        1 5 0.15 0 0 0 0 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+        "x" // profilegenericfunction
+        1 0 // perform2d mask2dgraded
+        1 3.21 0 1 2.5 2.5 2.5 0 0 0 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        64 64 255 1 1 // red green blue shading visible
+      end
+      begin <PcAtomObject3DLayer(1.1)>
+        "3D Atom Layer" // name
+        0 // grading
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        160 0 160 1 1 // red green blue shading visible
+      end
+      begin <PcAtomMaskLayer(1.8)>
+        "Atom Layer" // name
+        2 0 // operation fillgraded
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 0 1 // topspec toplayerindex topy
+        1 0 1 1 // bottomspec bottomlayerindex bottomy depth
+        1 0 0 1 // etchstopspec etchstoplayerindex etchstopy etchdepth
+        1 5 0.15 0 0 0 0 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+        "x" // profilegenericfunction
+        1 0 // perform2d mask2dgraded
+        1 1 0 1 1 1 1 0 0 0 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 1 0 1 1 1 1 0 0 0 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        255 255 255 1 1 // red green blue shading visible
+      end
+    end
+    4 // atomobject2dlayerstartindex
+    begin <pdObjectList(1.0)> "PaletteAtoms2D"
+      begin <PcAtom(1.6)>
+        ELLIPSE(0.175,0.175) // width, height
+        "Ellipse" // name
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        4 // objectlayerindex
+        1 // useobjectlayercolour
+      end
+      begin <PcAtom(1.6)>
+        RECTANGLE(0.3,0.3) // width, height
+        "Rectangle" // name
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        4 // objectlayerindex
+        1 // useobjectlayercolour
+      end
+      begin <PcAtom(1.6)>
+        REGPOLY(6,90,0.3,0.3) // numvertices, angle, width, height
+        "RegPoly" // name
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        4 // objectlayerindex
+        1 // useobjectlayercolour
+      end
+      begin <PcAtom(1.6)>
+        POLYGON(-0.15,-0.15,0.15,-0.15,0,0.15) // point1x, point1y, point2x, point2y, ...
+        "Polygon" // name
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        4 // objectlayerindex
+        1 // useobjectlayercolour
+      end
+    end
+    begin <pdObjectList(1.0)> "NonPaletteAtoms2D"
+    end
+    begin <pdObjectList(1.0)> "PaletteAtoms3D"
+      begin <PcAtom(1.6)>
+        ELLIPSE(0.3,0.3) // width, height
+        "Ellipsoid" // name
+        0.3 // sizey
+        1 1 0 1 1 1 1 0 0 0 // hole3dspec hole3drix hole3dalpha hole3dpermeability hole3drixx hole3drixyy hole3drixzz hole3drixxy hole3drixxz hole3drixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 // numwalls
+        0 0 // walltype wallthickness
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        3 // objectlayerindex
+        0 255 255 255 // useobjectlayercolour red green blue
+      end
+    end
+    begin <pdObjectList(1.0)> "Objects"
+      begin <FsRectangle(1.2)>
+        2 0.004948 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        6 6.752625 // sizez sizex
+        begin <PcLattice2D(1.0)>
+          0.365 0.365 0 60 2.1825 -0.004948 // latticeconstant1 latticeconstant2 latticeangle1 latticeangle2 latticeoriginz latticeoriginx
+          0 // numunitcells
+          340 // numlatticeatoms
+          // ispaletteatom atomindex latticepointn latticepointp offsetz offsetx offsetangle
+          1 1 -8 -4 0 0 0
+          1 1 -7 -4 0 0 0
+          1 1 -6 -4 0 0 0
+          1 1 -5 -4 0 0 0
+          1 1 -4 -4 0 0 0
+          1 1 -3 -4 0 0 0
+          1 1 -2 -4 0 0 0
+          1 1 -1 -4 0 0 0
+          1 1 0 -4 0 0 0
+          1 1 1 -4 0 0 0
+          1 1 -8 -3 0 0 0
+          1 1 -7 -3 0 0 0
+          1 1 -5 -3 0 0 0
+          1 1 -4 -3 0 0 0
+          1 1 -2 -3 0 0 0
+          1 1 -1 -3 0 0 0
+          1 1 0 -3 0 0 0
+          1 1 1 -3 0 0 0
+          1 1 -9 -2 0 0 0
+          1 1 -8 -2 0 0 0
+          1 1 -7 -2 0 0 0
+          1 1 -6 -2 0 0 0
+          1 1 -5 -2 0 0 0
+          1 1 -4 -2 0 0 0
+          1 1 -3 -2 0 0 0
+          1 1 -2 -2 0 0 0
+          1 1 -1 -2 0 0 0
+          1 1 0 -2 0 0 0
+          1 1 -9 -1 0 0 0
+          1 1 -8 -1 0 0 0
+          1 1 -7 -1 0 0 0
+          1 1 -6 -1 0 0 0
+          1 1 -5 -1 0 0 0
+          1 1 -4 -1 0 0 0
+          1 1 -3 -1 0 0 0
+          1 1 -2 -1 0 0 0
+          1 1 -1 -1 0 0 0
+          1 1 0 -1 0 0 0
+          1 1 -10 0 0 0 0
+          1 1 -8 0 0 0 0
+          1 1 -7 0 0 0 0
+          1 1 -4 0 0 0 0
+          1 1 -2 0 0 0 0
+          1 1 -1 0 0 0 0
+          1 1 -10 1 0 0 0
+          1 1 -9 1 0 0 0
+          1 1 -8 1 0 0 0
+          1 1 -7 1 0 0 0
+          1 1 -6 1 0 0 0
+          1 1 -5 1 0 0 0
+          1 1 -4 1 0 0 0
+          1 1 -3 1 0 0 0
+          1 1 -2 1 0 0 0
+          1 1 -1 1 0 0 0
+          1 1 -11 2 0 0 0
+          1 1 -10 2 0 0 0
+          1 1 -9 2 0 0 0
+          1 1 -8 2 0 0 0
+          1 1 -7 2 0 0 0
+          1 1 -6 2 0 0 0
+          1 1 -5 2 0 0 0
+          1 1 -4 2 0 0 0
+          1 1 -3 2 0 0 0
+          1 1 -2 2 0 0 0
+          1 1 -11 3 0 0 0
+          1 1 -10 3 0 0 0
+          1 1 -8 3 0 0 0
+          1 1 -7 3 0 0 0
+          1 1 -5 3 0 0 0
+          1 1 -4 3 0 0 0
+          1 1 -3 3 0 0 0
+          1 1 -2 3 0 0 0
+          1 1 -12 4 0 0 0
+          1 1 -11 4 0 0 0
+          1 1 -10 4 0 0 0
+          1 1 -9 4 0 0 0
+          1 1 -8 4 0 0 0
+          1 1 -7 4 0 0 0
+          1 1 -6 4 0 0 0
+          1 1 -5 4 0 0 0
+          1 1 -4 4 0 0 0
+          1 1 -3 4 0 0 0
+          1 1 -5 0 0 0 0
+          1 1 -9 -4 0 0 0
+          1 1 -10 -2 0 0 0
+          1 1 -11 0 0 0 0
+          1 1 -12 2 0 0 0
+          1 1 -13 4 0 0 0
+          1 1 -12 3 0 0 0
+          1 1 -11 1 0 0 0
+          1 1 -10 -1 0 0 0
+          1 1 -9 -3 0 0 0
+          1 1 -6 -10 0 0 0
+          1 1 -5 -10 0 0 0
+          1 1 -4 -10 0 0 0
+          1 1 -3 -10 0 0 0
+          1 1 -2 -10 0 0 0
+          1 1 -1 -10 0 0 0
+          1 1 0 -10 0 0 0
+          1 1 1 -10 0 0 0
+          1 1 2 -10 0 0 0
+          1 1 3 -10 0 0 0
+          1 1 4 -10 0 0 0
+          1 1 -6 -9 0 0 0
+          1 1 -5 -9 0 0 0
+          1 1 -4 -9 0 0 0
+          1 1 -3 -9 0 0 0
+          1 1 -2 -9 0 0 0
+          1 1 -1 -9 0 0 0
+          1 1 0 -9 0 0 0
+          1 1 1 -9 0 0 0
+          1 1 2 -9 0 0 0
+          1 1 3 -9 0 0 0
+          1 1 -7 -8 0 0 0
+          1 1 -6 -8 0 0 0
+          1 1 -5 -8 0 0 0
+          1 1 -4 -8 0 0 0
+          1 1 -3 -8 0 0 0
+          1 1 -2 -8 0 0 0
+          1 1 -1 -8 0 0 0
+          1 1 0 -8 0 0 0
+          1 1 1 -8 0 0 0
+          1 1 2 -8 0 0 0
+          1 1 3 -8 0 0 0
+          1 1 -7 -7 0 0 0
+          1 1 -6 -7 0 0 0
+          1 1 -5 -7 0 0 0
+          1 1 -4 -7 0 0 0
+          1 1 -3 -7 0 0 0
+          1 1 -2 -7 0 0 0
+          1 1 -1 -7 0 0 0
+          1 1 0 -7 0 0 0
+          1 1 1 -7 0 0 0
+          1 1 2 -7 0 0 0
+          1 1 -8 -6 0 0 0
+          1 1 -7 -6 0 0 0
+          1 1 -6 -6 0 0 0
+          1 1 -5 -6 0 0 0
+          1 1 -4 -6 0 0 0
+          1 1 -3 -6 0 0 0
+          1 1 -2 -6 0 0 0
+          1 1 -1 -6 0 0 0
+          1 1 0 -6 0 0 0
+          1 1 1 -6 0 0 0
+          1 1 2 -6 0 0 0
+          1 1 -8 -5 0 0 0
+          1 1 -7 -5 0 0 0
+          1 1 -6 -5 0 0 0
+          1 1 -5 -5 0 0 0
+          1 1 -4 -5 0 0 0
+          1 1 -3 -5 0 0 0
+          1 1 -2 -5 0 0 0
+          1 1 -1 -5 0 0 0
+          1 1 0 -5 0 0 0
+          1 1 1 -5 0 0 0
+          1 1 -13 5 0 0 0
+          1 1 -12 5 0 0 0
+          1 1 -11 5 0 0 0
+          1 1 -10 5 0 0 0
+          1 1 -9 5 0 0 0
+          1 1 -8 5 0 0 0
+          1 1 -7 5 0 0 0
+          1 1 -6 5 0 0 0
+          1 1 -5 5 0 0 0
+          1 1 -4 5 0 0 0
+          1 1 -14 6 0 0 0
+          1 1 -13 6 0 0 0
+          1 1 -12 6 0 0 0
+          1 1 -11 6 0 0 0
+          1 1 -10 6 0 0 0
+          1 1 -9 6 0 0 0
+          1 1 -8 6 0 0 0
+          1 1 -7 6 0 0 0
+          1 1 -6 6 0 0 0
+          1 1 -5 6 0 0 0
+          1 1 -4 6 0 0 0
+          1 1 -14 7 0 0 0
+          1 1 -13 7 0 0 0
+          1 1 -12 7 0 0 0
+          1 1 -11 7 0 0 0
+          1 1 -10 7 0 0 0
+          1 1 -9 7 0 0 0
+          1 1 -8 7 0 0 0
+          1 1 -7 7 0 0 0
+          1 1 -6 7 0 0 0
+          1 1 -5 7 0 0 0
+          1 1 -15 8 0 0 0
+          1 1 -14 8 0 0 0
+          1 1 -13 8 0 0 0
+          1 1 -12 8 0 0 0
+          1 1 -11 8 0 0 0
+          1 1 -10 8 0 0 0
+          1 1 -9 8 0 0 0
+          1 1 -8 8 0 0 0
+          1 1 -7 8 0 0 0
+          1 1 -6 8 0 0 0
+          1 1 -5 8 0 0 0
+          1 1 -15 9 0 0 0
+          1 1 -14 9 0 0 0
+          1 1 -13 9 0 0 0
+          1 1 -12 9 0 0 0
+          1 1 -11 9 0 0 0
+          1 1 -10 9 0 0 0
+          1 1 -9 9 0 0 0
+          1 1 -8 9 0 0 0
+          1 1 -7 9 0 0 0
+          1 1 -6 9 0 0 0
+          1 1 -16 10 0 0 0
+          1 1 -15 10 0 0 0
+          1 1 -14 10 0 0 0
+          1 1 -13 10 0 0 0
+          1 1 -12 10 0 0 0
+          1 1 -11 10 0 0 0
+          1 1 -10 10 0 0 0
+          1 1 -9 10 0 0 0
+          1 1 -8 10 0 0 0
+          1 1 -7 10 0 0 0
+          1 1 -6 10 0 0 0
+          1 1 -8 -10 0 0 0
+          1 1 -7 -10 0 0 0
+          1 1 5 -10 0 0 0
+          1 1 6 -10 0 0 0
+          1 1 7 -10 0 0 0
+          1 1 -8 -9 0 0 0
+          1 1 -7 -9 0 0 0
+          1 1 4 -9 0 0 0
+          1 1 5 -9 0 0 0
+          1 1 6 -9 0 0 0
+          1 1 -9 -8 0 0 0
+          1 1 -8 -8 0 0 0
+          1 1 4 -8 0 0 0
+          1 1 5 -8 0 0 0
+          1 1 6 -8 0 0 0
+          1 1 -9 -7 0 0 0
+          1 1 -8 -7 0 0 0
+          1 1 3 -7 0 0 0
+          1 1 4 -7 0 0 0
+          1 1 5 -7 0 0 0
+          1 1 -10 -6 0 0 0
+          1 1 -9 -6 0 0 0
+          1 1 3 -6 0 0 0
+          1 1 4 -6 0 0 0
+          1 1 5 -6 0 0 0
+          1 1 -10 -5 0 0 0
+          1 1 -9 -5 0 0 0
+          1 1 2 -5 0 0 0
+          1 1 3 -5 0 0 0
+          1 1 4 -5 0 0 0
+          1 1 -11 -4 0 0 0
+          1 1 -10 -4 0 0 0
+          1 1 2 -4 0 0 0
+          1 1 3 -4 0 0 0
+          1 1 4 -4 0 0 0
+          1 1 -11 -3 0 0 0
+          1 1 -10 -3 0 0 0
+          1 1 2 -3 0 0 0
+          1 1 3 -3 0 0 0
+          1 1 -12 -2 0 0 0
+          1 1 -11 -2 0 0 0
+          1 1 1 -2 0 0 0
+          1 1 2 -2 0 0 0
+          1 1 3 -2 0 0 0
+          1 1 -12 -1 0 0 0
+          1 1 -11 -1 0 0 0
+          1 1 1 -1 0 0 0
+          1 1 2 -1 0 0 0
+          1 1 -13 0 0 0 0
+          1 1 -12 0 0 0 0
+          1 1 0 0 0 0 0
+          1 1 1 0 0 0 0
+          1 1 2 0 0 0 0
+          1 1 -13 1 0 0 0
+          1 1 -12 1 0 0 0
+          1 1 0 1 0 0 0
+          1 1 1 1 0 0 0
+          1 1 -14 2 0 0 0
+          1 1 -13 2 0 0 0
+          1 1 -1 2 0 0 0
+          1 1 0 2 0 0 0
+          1 1 1 2 0 0 0
+          1 1 -14 3 0 0 0
+          1 1 -13 3 0 0 0
+          1 1 -1 3 0 0 0
+          1 1 0 3 0 0 0
+          1 1 -15 4 0 0 0
+          1 1 -14 4 0 0 0
+          1 1 -2 4 0 0 0
+          1 1 -1 4 0 0 0
+          1 1 0 4 0 0 0
+          1 1 -15 5 0 0 0
+          1 1 -14 5 0 0 0
+          1 1 -3 5 0 0 0
+          1 1 -2 5 0 0 0
+          1 1 -1 5 0 0 0
+          1 1 -16 6 0 0 0
+          1 1 -15 6 0 0 0
+          1 1 -3 6 0 0 0
+          1 1 -2 6 0 0 0
+          1 1 -1 6 0 0 0
+          1 1 -16 7 0 0 0
+          1 1 -15 7 0 0 0
+          1 1 -4 7 0 0 0
+          1 1 -3 7 0 0 0
+          1 1 -2 7 0 0 0
+          1 1 -17 8 0 0 0
+          1 1 -16 8 0 0 0
+          1 1 -4 8 0 0 0
+          1 1 -3 8 0 0 0
+          1 1 -2 8 0 0 0
+          1 1 -17 9 0 0 0
+          1 1 -16 9 0 0 0
+          1 1 -5 9 0 0 0
+          1 1 -4 9 0 0 0
+          1 1 -3 9 0 0 0
+          1 1 -18 10 0 0 0
+          1 1 -17 10 0 0 0
+          1 1 -5 10 0 0 0
+          1 1 -4 10 0 0 0
+          1 1 -3 10 0 0 0
+          1 1 -9 -10 0 0 0
+          1 1 -10 -8 0 0 0
+          1 1 -11 -6 0 0 0
+          1 1 -12 -4 0 0 0
+          1 1 -13 -2 0 0 0
+          1 1 -14 0 0 0 0
+          1 1 -15 2 0 0 0
+          1 1 -16 4 0 0 0
+          1 1 -17 6 0 0 0
+          1 1 -18 8 0 0 0
+          1 1 -19 10 0 0 0
+          1 1 -9 -9 0 0 0
+          1 1 -10 -7 0 0 0
+          1 1 -11 -5 0 0 0
+          1 1 -12 -3 0 0 0
+          1 1 -13 -1 0 0 0
+          1 1 -14 1 0 0 0
+          1 1 -15 3 0 0 0
+          1 1 -16 5 0 0 0
+          1 1 -17 7 0 0 0
+          1 1 -18 9 0 0 0
+        end
+      end
+      begin <pdEndSection(1.0)>
+        2.121364 // positionz
+      end
+      begin <FsRectangle(1.2)>
+        5.059231 0.013583 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        0.118462 6.769895 // sizez sizex
+      end
+      begin <FsRectangle(1.2)>
+        -1.047 0.013583 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        0.094 6.769895 // sizez sizex
+      end
+      begin <pdDipoleExcitor(1.2)>
+        2 0 0 // positionz positionx angle
+        0 0 // sizez sizex
+        4 2 1 // ymaxspec ymaxlayer ymaxcoordinate
+        4 2 1 // yminspec yminlayer ymincoordinate
+        3 2 20 0 // timeenvshape timeenvwidthspec timeenvwidth timeenvdelay
+        "" // timeenvfunction
+        1 1.4 "" 0 1.000000e-006 // chirpswitch wavelength endwavelength phase power
+        "" // phasefunction
+        1 1 1 100 // polarisation coherent coherencespec coherence
+      end
+      begin <pdSensorZX(1.3)>
+        2.2 0 0 // positionz positionx angle
+        0.15 // sizex
+        3 2 1 // ymaxspec ymaxlayer ymaxcoordinate
+        5 2 1 // yminspec yminlayer ymincoordinate
+        "Cavity" // name
+        1 // transformtype
+      end
+      begin <pdSideSection(1.0)>
+        -0.341513 // positionx
+      end
+      begin <pdSensorY(1.3)>
+        2 0 0 // positionz positionx angle
+        3 3 // sizez sizex
+        1 0 1 // ypositionspec ypositionlayer ypositioncoordinate
+        "Top_1_1" // name
+        1 // transformtype
+        1 // upward
+      end
+      begin <FsRectangle(1.2)>
+        2.012231 -3.295659 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        6.212462 0.151412 // sizez sizex
+      end
+      begin <FsRectangle(1.2)>
+        2.012231 3.322824 0 // positionz positionx angle
+        2 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        6.212462 0.151412 // sizez sizex
+      end
+    end
+    begin <pdObjectList(1.0)> "Constraints"
+    end
+    begin <pdFDTDParameters(1.17)>
+      3 2 500 0 // numdimensions durationspec duration centralwavelength
+      1 0.02 // gridtype gridspacing
+      8 1 1 2 // pmlthickness pmlstructure pmlfactor pmlexponent
+      1 // boundarycondition
+      0 // overridexneg
+      0 // overridexpos
+      0 // overrideyneg
+      0 // overrideypos
+      0 // overridezneg
+      0 // overridezpos
+      0.4 1 10 10 // minwavelength maxwavelength mixingtolerance epsilontolerance
+      0.05 10000 0.05 0.01 // gradingrixtolerance gradingalphatolerance gradingpermeabilitytolerance gradingparamtolerance
+      begin <pdFDTDMaterialParamsDatabase(1.1)>
+        2 // numentries
+        begin <pdFDTDMaterialParameters(1.5)>
+          "aluminium" // materialname
+          0 0 0 0 // hasxparam hasyparam xparam yparam
+          0 0 4 0 0 1 // epsnonlinear epsilontolerance epsmodel munonlinear mutolerance mumodel 
+          1 // numpoles
+          1 1 // amplitude relaxationtime
+          1 1 // valuestatic valueinfinity
+          1 1 // collisionfrequency plasmafrequency
+          1 // numpoles
+          -100000 0.5 1573.446575 // amplitude dampingconstant resonantfrequency
+          10.3041 1 // valuestatic valueinfinity
+          1 // valuestatic
+          1 // gainmultiplier
+          1 // numpoles
+          1 1 // amplitude relaxationtime
+          1 1 // valuestatic valueinfinity
+          1 1 // collisionfrequency plasmafrequency
+          1 // numpoles
+          1 1 1 // amplitude dampingconstant resonantfrequency
+          1 1 // valuestatic valueinfinity
+          1 // valuestatic
+        end
+        begin <pdFDTDMaterialParameters(1.5)>
+          "InPGain" // materialname
+          0 0 0 0 // hasxparam hasyparam xparam yparam
+          0 0 6 0 0 1 // epsnonlinear epsilontolerance epsmodel munonlinear mutolerance mumodel 
+          1 // numpoles
+          1 1 // amplitude relaxationtime
+          1 1 // valuestatic valueinfinity
+          1 1 // collisionfrequency plasmafrequency
+          1 // numpoles
+          1 1 1 // amplitude dampingconstant resonantfrequency
+          1 1 // valuestatic valueinfinity
+          1 // valuestatic
+          1 // gainmultiplier
+          1 // numpoles
+          1 1 // amplitude relaxationtime
+          1 1 // valuestatic valueinfinity
+          1 1 // collisionfrequency plasmafrequency
+          1 // numpoles
+          1 1 1 // amplitude dampingconstant resonantfrequency
+          1 1 // valuestatic valueinfinity
+          1 // valuestatic
+        end
+      end
+      0 8 0 100 2 // sensorminwavelength sensortimeundersample sensorintegrateflux sensorspectrumrange sensorspectrumstepsfac
+      2 50 0 1 // fourierspec fourierstart fourierlength fourierwindow
+      begin <pdScannerParameters(1.0)>
+        0 // scannerenabled
+        "x" // scanvariablename
+        0 1 0.1 // scanvariablefrom scanvariableto scanvariablestep
+        0 // numscanneractions
+      end
+      begin <pdActiveFDTDParameters(1.2)>
+        1 // carrieraccelfactor
+        1 // carrierspatialresolution
+        1e-020 // initialcarrierdensity
+      end
+    end
+    begin <pdFDParameters(1.4)>
+      1 0.05 0.98 1.55 // discretisation resolution priority wavelength
+      1 1 1 1 // boundaryconditionsleft boundaryconditionsright boundaryconditionsbottom boundaryconditionstop
+      1 1 1 1 // pmlthicknessleft pmlthicknessright pmlthicknessbottom pmlthicknesstop
+      begin <pdScannerParameters(1.0)>
+        0 // scannerenabled
+        "x" // scanvariablename
+        0 1 0.1 // scanvariablefrom scanvariableto scanvariablestep
+        0 // numscanneractions
+      end
+    end
+    0 // mlengineparameters
+    0 // growall
+    1 1 0 1 1 1 1 0 0 0 // background3dspec background3drix background3dalpha background3dpermeability background3drixx background3drixyy background3drixzz background3drixxy background3drixxz background3drixyz
+    "" // materialname
+    0 0 0 0 // hasxparam hasyparam xparam yparam
+    1 1 0 1 1 1 1 0 0 0 // background2dspec background2drix background2dalpha background2dpermeability background2drixx background2drixyy background2drixzz background2drixxy background2drixxz background2drixyz
+    "" // materialname
+    0 0 0 0 // hasxparam hasyparam xparam yparam
+    6 // refsensorindex
+    1 1 // computationallayervisible instrumentlayervisible
+    1 // constraintlayervisible
+    0 // sectionlayervisible
+    0 0 // structurelayervisible fieldlayervisible
+    0 // carrierlayervisible
+    1 0 0 1.000000 1.000000 // grid... shown linesshown linesminorshown spacingz spacingx
+    0 0.100000 0.100000 // snap... enabled spacingz spacingx
+  end
+end

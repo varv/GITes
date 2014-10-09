@@ -1,0 +1,5 @@
+Example based on a structure from:
+G. Roelkens, D. Van Thourhout, R. Baets, "SOI grating structure for perfectly vertical fiber coupling", ECIO Proceedings 2007
+
+This example is described on our website:
+http://www.photond.com/products/omnisim/omnisim_applications_07.htm

@@ -1,0 +1,1521 @@
+begin <pdApplicationInfo(1.1)>
+  OmniSim + CrystalWave 4.5.5 // applicationname applicationversion
+  765 // licensenumber
+  6.0 (64 bit) 3316.39 // windowsversion RAM_in_MB 
+  27/05/2011 15:53:43 // savedate(dd/mm/yyyy) savetime(hh:mm:ss)
+end
+begin <pdEditorProject(1.0)> "Example Project"
+  begin <notesTB(1.0)> "Notes"
+    >From Fimmwave.
+    >
+    >Si waveguide is single moded below 0.23um  
+  end
+  begin <pdEditorProject(1.0)> "Example 1"
+    begin <FsDevice(1.10)> "Device 1"
+      0.000000 1.400000 0.000000 1.400000 // zmin zmax xmin xmax
+      25.000000 // temperature
+      "" // materialsdatabase
+      begin <pdObjectList(1.0)> "PhysicalLayers"
+        begin <pdPhysicalLayer(1.3)>
+          "Physical Layer" // name
+          1.000000 // thickness
+          0 // graded
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          0 // active
+          1.000000 // trueactivethickness
+          88 88 176 1 1 // red green blue shading visible
+        end
+      end
+      begin <pdObjectList(1.0)> "ObjectLayers"
+        begin <pdMaskLayer(1.8)>
+          "Mask Layer" // name
+          2 1 0 // operation inverse fillgraded
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 0 1.000000 // topspec toplayerindex topy
+          1 0 0.000000 1.000000 // bottomspec bottomlayerindex bottomy depth
+          1 0 0.000000 1.000000 // etchstopspec etchstoplayerindex etchstopy etchdepth
+          1 5.710593 0.150000 0 0.000000 0.000000 0.000000 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+          "x" // profilegenericfunction
+          1 0 // perform2d mask2dgraded
+          1 3.500000 0.000000 1.000000 3.500000 3.500000 3.500000 0.000000 0.000000 0.000000 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          0 // active
+          1.000000 // trueactivethickness
+          0 0 176 1 1 // red green blue shading visible
+        end
+      end
+      begin <pdObjectList(1.0)> "SubFsDevices"
+      end
+      begin <pdObjectList(1.0)> "Objects"
+        begin <FsRectangle(1.2)>
+          "(0.7-SqSize/2-GapLength)/2" 0.700000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          "0.7-SqSize/2-GapLength" 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.700000 "1.4-(0.7-SqSize/2-GapLength)/2" -90.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          "0.7-SqSize/2-GapLength" 0.200000 // sizez sizex
+        end
+        begin <pdModeExcitorZX(2.5)>
+          0.050000 0.700000 0.000000 // positionz positionx angle
+          0.400000 // sizex
+          1 0 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          2 0 1.000000 // yminspec yminlayer ymincoordinate
+          1.550000 1 1 256.000000 1.000000e+000 0.000000 // wavelength timeenvshape timeenvwidthspec timeenvwidth power phase
+          1 // polarisation
+          1 // modesolver
+          0 2 // modeorder profilemethod
+          "" // importfile
+        end
+        begin <FsRectangle(1.2)>
+          0.700000 "(0.7-SqSize/2-GapLength)/2" -90.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          "0.7-SqSize/2-GapLength" 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          "1.4-(0.7-SqSize/2-GapLength)/2" 0.700000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          "0.7-SqSize/2-GapLength" 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.700000 0.700000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.100000 0.100000 // sizez sizex
+        end
+        begin <pdSensorZX(1.3)>
+          1.350000 0.700000 0.000000 // positionz positionx angle
+          0.500000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Sensor 1" // name
+          1 // transformtype
+        end
+        begin <pdSensorZX(1.3)>
+          0.100000 0.700000 0.000000 // positionz positionx angle
+          0.500000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Sensor 2" // name
+          1 // transformtype
+        end
+        begin <pdSensorZX(1.3)>
+          0.700000 1.350000 90.000000 // positionz positionx angle
+          0.500000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Copy of Sensor 1" // name
+          1 // transformtype
+        end
+      end
+      begin <pdObjectList(1.0)> "Constraints"
+        begin <pdCartesianConstraint(1.0)>
+          3 1 4 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 -0.050000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          7 5 6 6 // subobjectindex domobjectindex subalignment domalignment
+          1 1 0.050000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          9 2 6 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 0.000000 0.050000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          8 1 4 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 -0.100000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+      end
+      begin <pdFDTDParameters(1.17)>
+        2 1 4096.000000 0.000000 // numdimensions durationspec duration centralwavelength
+        1 0.050000 // gridtype gridspacing
+        8 1 1.000000 2.000000 // pmlthickness pmlstructure pmlfactor pmlexponent
+        1 // boundarycondition
+        0 // overridexneg
+        0 // overridexpos
+        0 // overrideyneg
+        0 // overrideypos
+        0 // overridezneg
+        0 // overridezpos
+        1.350000 1.750000 10.000000 10.000000 // minwavelength maxwavelength mixingtolerance epsilontolerance
+        0.050000 10000.000000 0.050000 0.010000 // gradingrixtolerance gradingalphatolerance gradingpermeabilitytolerance gradingparamtolerance
+        begin <pdFDTDMaterialParamsDatabase(1.1)>
+          0 // numentries
+        end
+        0.500000 4 0 100.000000 2.000000 // sensorminwavelength sensortimeundersample sensorintegrateflux sensorspectrumrange sensorspectrumstepsfac
+        1 1.000000 0.000000 1 // fourierspec fourierstart fourierlength fourierwindow
+        begin <pdScannerParameters(1.0)>
+          0 // scannerenabled
+          "x" // scanvariablename
+          0.000000 1.000000 0.100000 // scanvariablefrom scanvariableto scanvariablestep
+          0 // numscanneractions
+        end
+        begin <pdActiveFDTDParameters(1.2)>
+          1.000000 // carrieraccelfactor
+          1 // carrierspatialresolution
+          0.000000 // initialcarrierdensity
+        end
+      end
+      begin <pdFDParameters(1.4)>
+        1 0.020000 0.980000 1.550000 // discretisation resolution priority wavelength
+        1 1 1 1 // boundaryconditionsleft boundaryconditionsright boundaryconditionsbottom boundaryconditionstop
+        1.000000 1.000000 1.000000 1.000000 // pmlthicknessleft pmlthicknessright pmlthicknessbottom pmlthicknesstop
+        begin <pdScannerParameters(1.0)>
+          0 // scannerenabled
+          "x" // scanvariablename
+          0.000000 1.000000 0.100000 // scanvariablefrom scanvariableto scanvariablestep
+          0 // numscanneractions
+        end
+      end
+      0 // mlengineparameters
+      1 // growall
+      1 1.000000 0.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 // background3dspec background3drix background3dalpha background3dpermeability background3drixx background3drixyy background3drixzz background3drixxy background3drixxz background3drixyz
+      "" // materialname
+      0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+      1 1.000000 0.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 // background2dspec background2drix background2dalpha background2dpermeability background2drixx background2drixyy background2drixzz background2drixxy background2drixxz background2drixyz
+      "" // materialname
+      0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+      7 // refsensorindex
+      1 1 // computationallayervisible instrumentlayervisible
+      1 // constraintlayervisible
+      1 // sectionlayervisible
+      0 0 // structurelayervisible fieldlayervisible
+      0 // carrierlayervisible
+      1 0 0 1.000000 1.000000 // grid... shown linesshown linesminorshown spacingz spacingx
+      0 0.100000 0.100000 // snap... enabled spacingz spacingx
+    end
+    begin <FPOptimiser(1.2)> "KALLISTOS 1"
+      PRJITEMNAME : "Device 1"
+      PRECISION : 0.0001
+      MAXFUNCEVALS : 0
+      MAXIMISE : 1
+      OPTMETHOD : 2
+      OBJFUNCTYPE : Positive Flux
+      ANALYTICMETHOD : 0
+      BOXSIZE : 0.000000
+      INDEPENDENTVAR : SqSize 0 0.3 0.15
+      INDEPENDENTVAR : GapLength 0 0.3 0.15
+      begin <FPOptimiserObjFuncData(1.0)> "Positive Flux"
+        CALC_COMMAND : "fsdevice.calculatefd()" 
+        CALC_COMMAND : "fsdevice.getfluxfd(8, 2)" ref_flux
+        CALC_COMMAND : "fsdevice.getfluxfd(7, 2)" Transmission
+        CALC_COMMAND : "fsdevice.getfluxfd(9, 2)" cross_talk
+        OBJECTIVE : (Transmission-cross_talk)/ref_flux
+      end
+    end
+    begin <FsDevice(1.10)> "Device 1_opt"
+      0.000000 1.400000 0.000000 1.400000 // zmin zmax xmin xmax
+      25.000000 // temperature
+      "" // materialsdatabase
+      begin <pdObjectList(1.0)> "PhysicalLayers"
+        begin <pdPhysicalLayer(1.3)>
+          "Physical Layer" // name
+          1.000000 // thickness
+          0 // graded
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          0 // active
+          1.000000 // trueactivethickness
+          88 88 176 1 1 // red green blue shading visible
+        end
+      end
+      begin <pdObjectList(1.0)> "ObjectLayers"
+        begin <pdMaskLayer(1.8)>
+          "Mask Layer" // name
+          2 1 0 // operation inverse fillgraded
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 0 1.000000 // topspec toplayerindex topy
+          1 0 0.000000 1.000000 // bottomspec bottomlayerindex bottomy depth
+          1 0 0.000000 1.000000 // etchstopspec etchstoplayerindex etchstopy etchdepth
+          1 5.710593 0.150000 0 0.000000 0.000000 0.000000 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+          "x" // profilegenericfunction
+          1 0 // perform2d mask2dgraded
+          1 3.500000 0.000000 1.000000 3.500000 3.500000 3.500000 0.000000 0.000000 0.000000 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          0 // active
+          1.000000 // trueactivethickness
+          0 0 176 1 1 // red green blue shading visible
+        end
+      end
+      begin <pdObjectList(1.0)> "SubFsDevices"
+      end
+      begin <pdObjectList(1.0)> "Objects"
+        begin <FsRectangle(1.2)>
+          0.312500 0.700000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.625000 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.700000 1.087500 -90.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.625000 0.200000 // sizez sizex
+        end
+        begin <pdModeExcitorZX(2.5)>
+          0.050000 0.700000 0.000000 // positionz positionx angle
+          0.400000 // sizex
+          1 0 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          2 0 1.000000 // yminspec yminlayer ymincoordinate
+          1.550000 1 1 256.000000 1.000000e+000 0.000000 // wavelength timeenvshape timeenvwidthspec timeenvwidth power phase
+          1 // polarisation
+          1 // modesolver
+          0 2 // modeorder profilemethod
+          "" // importfile
+        end
+        begin <FsRectangle(1.2)>
+          0.700000 0.312500 -90.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.625000 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          1.087500 0.700000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.625000 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.700000 0.700000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.050000 0.050000 // sizez sizex
+        end
+        begin <pdSensorZX(1.3)>
+          1.350000 0.700000 0.000000 // positionz positionx angle
+          0.500000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Sensor 1" // name
+          1 // transformtype
+        end
+        begin <pdSensorZX(1.3)>
+          0.100000 0.700000 0.000000 // positionz positionx angle
+          0.500000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Sensor 2" // name
+          1 // transformtype
+        end
+        begin <pdSensorZX(1.3)>
+          0.700000 1.350000 90.000000 // positionz positionx angle
+          0.500000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Copy of Sensor 1" // name
+          1 // transformtype
+        end
+      end
+      begin <pdObjectList(1.0)> "Constraints"
+        begin <pdCartesianConstraint(1.0)>
+          3 1 4 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 -0.050000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          7 5 6 6 // subobjectindex domobjectindex subalignment domalignment
+          1 1 0.050000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          9 2 6 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 0.000000 0.050000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          8 1 4 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 -0.100000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+      end
+      begin <pdFDTDParameters(1.17)>
+        2 1 4096.000000 0.000000 // numdimensions durationspec duration centralwavelength
+        1 0.050000 // gridtype gridspacing
+        8 1 1.000000 2.000000 // pmlthickness pmlstructure pmlfactor pmlexponent
+        1 // boundarycondition
+        0 // overridexneg
+        0 // overridexpos
+        0 // overrideyneg
+        0 // overrideypos
+        0 // overridezneg
+        0 // overridezpos
+        1.350000 1.750000 10.000000 10.000000 // minwavelength maxwavelength mixingtolerance epsilontolerance
+        0.050000 10000.000000 0.050000 0.010000 // gradingrixtolerance gradingalphatolerance gradingpermeabilitytolerance gradingparamtolerance
+        begin <pdFDTDMaterialParamsDatabase(1.1)>
+          0 // numentries
+        end
+        0.500000 4 0 100.000000 2.000000 // sensorminwavelength sensortimeundersample sensorintegrateflux sensorspectrumrange sensorspectrumstepsfac
+        1 1.000000 0.000000 1 // fourierspec fourierstart fourierlength fourierwindow
+        begin <pdScannerParameters(1.0)>
+          0 // scannerenabled
+          "x" // scanvariablename
+          0.000000 1.000000 0.100000 // scanvariablefrom scanvariableto scanvariablestep
+          0 // numscanneractions
+        end
+        begin <pdActiveFDTDParameters(1.2)>
+          1.000000 // carrieraccelfactor
+          1 // carrierspatialresolution
+          0.000000 // initialcarrierdensity
+        end
+      end
+      begin <pdFDParameters(1.4)>
+        1 0.020000 0.980000 1.550000 // discretisation resolution priority wavelength
+        1 1 1 1 // boundaryconditionsleft boundaryconditionsright boundaryconditionsbottom boundaryconditionstop
+        1.000000 1.000000 1.000000 1.000000 // pmlthicknessleft pmlthicknessright pmlthicknessbottom pmlthicknesstop
+        begin <pdScannerParameters(1.0)>
+          0 // scannerenabled
+          "x" // scanvariablename
+          0.000000 1.000000 0.100000 // scanvariablefrom scanvariableto scanvariablestep
+          0 // numscanneractions
+        end
+      end
+      0 // mlengineparameters
+      1 // growall
+      1 1.000000 0.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 // background3dspec background3drix background3dalpha background3dpermeability background3drixx background3drixyy background3drixzz background3drixxy background3drixxz background3drixyz
+      "" // materialname
+      0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+      1 1.000000 0.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 // background2dspec background2drix background2dalpha background2dpermeability background2drixx background2drixyy background2drixzz background2drixxy background2drixxz background2drixyz
+      "" // materialname
+      0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+      7 // refsensorindex
+      1 1 // computationallayervisible instrumentlayervisible
+      1 // constraintlayervisible
+      1 // sectionlayervisible
+      0 0 // structurelayervisible fieldlayervisible
+      0 // carrierlayervisible
+      1 0 0 1.000000 1.000000 // grid... shown linesshown linesminorshown spacingz spacingx
+      0 0.100000 0.100000 // snap... enabled spacingz spacingx
+    end
+  end
+  begin <pdEditorProject(1.0)> "Example 2"
+    begin <FsDevice(1.10)> "Device 2"
+      0.000000 1.600000 0.000000 1.600000 // zmin zmax xmin xmax
+      25.000000 // temperature
+      "" // materialsdatabase
+      begin <pdObjectList(1.0)> "PhysicalLayers"
+        begin <pdPhysicalLayer(1.3)>
+          "Physical Layer" // name
+          1.000000 // thickness
+          0 // graded
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          0 // active
+          1.000000 // trueactivethickness
+          88 88 176 1 1 // red green blue shading visible
+        end
+      end
+      begin <pdObjectList(1.0)> "ObjectLayers"
+        begin <pdMaskLayer(1.8)>
+          "Mask Layer" // name
+          2 1 0 // operation inverse fillgraded
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 0 1.000000 // topspec toplayerindex topy
+          1 0 0.000000 1.000000 // bottomspec bottomlayerindex bottomy depth
+          1 0 0.000000 1.000000 // etchstopspec etchstoplayerindex etchstopy etchdepth
+          1 5.710593 0.150000 0 0.000000 0.000000 0.000000 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+          "x" // profilegenericfunction
+          1 0 // perform2d mask2dgraded
+          1 3.500000 0.000000 1.000000 3.500000 3.500000 3.500000 0.000000 0.000000 0.000000 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          0 // active
+          1.000000 // trueactivethickness
+          0 0 176 1 1 // red green blue shading visible
+        end
+      end
+      begin <pdObjectList(1.0)> "SubFsDevices"
+      end
+      begin <pdObjectList(1.0)> "Objects"
+        begin <FsRectangle(1.2)>
+          "(0.8-SqSize/2-Gap1-Gap2-L1)/2" 0.800000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          "0.8-SqSize/2-Gap1-Gap2-L1" 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.800000 "1.6-(0.8-SqSize/2-Gap1-Gap2-L1)/2" -90.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          "0.8-SqSize/2-Gap1-Gap2-L1" 0.200000 // sizez sizex
+        end
+        begin <pdModeExcitorZX(2.5)>
+          0.050000 0.800000 0.000000 // positionz positionx angle
+          0.400000 // sizex
+          1 0 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          2 0 1.000000 // yminspec yminlayer ymincoordinate
+          1.550000 1 1 256.000000 1.000000e+000 0.000000 // wavelength timeenvshape timeenvwidthspec timeenvwidth power phase
+          1 // polarisation
+          1 // modesolver
+          0 2 // modeorder profilemethod
+          "" // importfile
+        end
+        begin <FsRectangle(1.2)>
+          0.800000 "(0.8-SqSize/2-Gap1-Gap2-L1)/2" -90.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          "0.8-SqSize/2-Gap1-Gap2-L1" 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          "1.6-(0.8-SqSize/2-Gap1-Gap2-L1)/2" 0.800000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          "0.8-SqSize/2-Gap1-Gap2-L1" 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.800000 0.800000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          "SqSize" "SqSize" // sizez sizex
+        end
+        begin <pdSensorZX(1.3)>
+          1.550000 0.800000 0.000000 // positionz positionx angle
+          0.500000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Sensor 1" // name
+          1 // transformtype
+        end
+        begin <pdSensorZX(1.3)>
+          0.075000 0.800000 0.000000 // positionz positionx angle
+          1.000000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Sensor 2" // name
+          1 // transformtype
+        end
+        begin <FsRectangle(1.2)>
+          "0.8-SqSize/2-Gap1-L1/2" 0.800000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.100000 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.800000 0.800000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.200000 0.100000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.800000 0.800000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.100000 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.800000 0.800000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.200000 0.100000 // sizez sizex
+        end
+        begin <pdSensorZX(1.3)>
+          0.800000 1.550000 90.000000 // positionz positionx angle
+          0.500000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Copy of Copy of Sensor 1" // name
+          1 // transformtype
+        end
+      end
+      begin <pdObjectList(1.0)> "Constraints"
+        begin <pdCartesianConstraint(1.0)>
+          3 1 4 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 -0.050000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          7 5 6 6 // subobjectindex domobjectindex subalignment domalignment
+          1 1 0.050000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          8 1 4 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 -0.075000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          13 2 6 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 0.000000 0.050000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+      end
+      begin <pdFDTDParameters(1.17)>
+        2 1 4096.000000 0.000000 // numdimensions durationspec duration centralwavelength
+        1 0.050000 // gridtype gridspacing
+        8 1 1.000000 2.000000 // pmlthickness pmlstructure pmlfactor pmlexponent
+        1 // boundarycondition
+        0 // overridexneg
+        0 // overridexpos
+        0 // overrideyneg
+        0 // overrideypos
+        0 // overridezneg
+        0 // overridezpos
+        1.350000 1.750000 10.000000 10.000000 // minwavelength maxwavelength mixingtolerance epsilontolerance
+        0.050000 10000.000000 0.050000 0.010000 // gradingrixtolerance gradingalphatolerance gradingpermeabilitytolerance gradingparamtolerance
+        begin <pdFDTDMaterialParamsDatabase(1.1)>
+          0 // numentries
+        end
+        0.500000 4 0 100.000000 2.000000 // sensorminwavelength sensortimeundersample sensorintegrateflux sensorspectrumrange sensorspectrumstepsfac
+        1 1.000000 0.000000 1 // fourierspec fourierstart fourierlength fourierwindow
+        begin <pdScannerParameters(1.0)>
+          0 // scannerenabled
+          "x" // scanvariablename
+          0.000000 1.000000 0.100000 // scanvariablefrom scanvariableto scanvariablestep
+          0 // numscanneractions
+        end
+        begin <pdActiveFDTDParameters(1.2)>
+          1.000000 // carrieraccelfactor
+          1 // carrierspatialresolution
+          0.000000 // initialcarrierdensity
+        end
+      end
+      begin <pdFDParameters(1.4)>
+        1 0.020000 0.980000 1.550000 // discretisation resolution priority wavelength
+        1 1 1 1 // boundaryconditionsleft boundaryconditionsright boundaryconditionsbottom boundaryconditionstop
+        1.000000 1.000000 1.000000 1.000000 // pmlthicknessleft pmlthicknessright pmlthicknessbottom pmlthicknesstop
+        begin <pdScannerParameters(1.0)>
+          0 // scannerenabled
+          "x" // scanvariablename
+          0.000000 1.000000 0.100000 // scanvariablefrom scanvariableto scanvariablestep
+          0 // numscanneractions
+        end
+      end
+      0 // mlengineparameters
+      1 // growall
+      1 1.000000 0.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 // background3dspec background3drix background3dalpha background3dpermeability background3drixx background3drixyy background3drixzz background3drixxy background3drixxz background3drixyz
+      "" // materialname
+      0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+      1 1.000000 0.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 // background2dspec background2drix background2dalpha background2dpermeability background2drixx background2drixyy background2drixzz background2drixxy background2drixxz background2drixyz
+      "" // materialname
+      0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+      7 // refsensorindex
+      1 1 // computationallayervisible instrumentlayervisible
+      1 // constraintlayervisible
+      1 // sectionlayervisible
+      0 0 // structurelayervisible fieldlayervisible
+      0 // carrierlayervisible
+      1 0 0 1.000000 1.000000 // grid... shown linesshown linesminorshown spacingz spacingx
+      0 0.100000 0.100000 // snap... enabled spacingz spacingx
+    end
+    begin <FPOptimiser(1.2)> "KALLISTOS 2"
+      PRJITEMNAME : "Device 2"
+      PRECISION : 0.0001
+      MAXFUNCEVALS : 0
+      MAXIMISE : 1
+      OPTMETHOD : 2
+      OBJFUNCTYPE : Positive Flux
+      ANALYTICMETHOD : 0
+      BOXSIZE : 0.000000
+      INDEPENDENTVAR : SqSize 0 0.2 0.15
+      INDEPENDENTVAR : Gap1 0 0.2 0.1
+      INDEPENDENTVAR : Gap2 0 0.2 0.1
+      INDEPENDENTVAR : L1 0 0.2 0.1
+      begin <FPOptimiserObjFuncData(1.0)> "Positive Flux"
+        CALC_COMMAND : "fsdevice.calculatefd()" 
+        CALC_COMMAND : "fsdevice.getfluxfd(8, 2)" ref_flux
+        CALC_COMMAND : "fsdevice.getfluxfd(7, 2)" Transmission
+        CALC_COMMAND : "fsdevice.getfluxfd(13, 2)" cross_talk
+        OBJECTIVE : (Transmission-cross_talk)/ref_flux
+      end
+    end
+    begin <FsDevice(1.10)> "Device 2_opt"
+      0.000000 1.600000 0.000000 1.600000 // zmin zmax xmin xmax
+      25.000000 // temperature
+      "" // materialsdatabase
+      begin <pdObjectList(1.0)> "PhysicalLayers"
+        begin <pdPhysicalLayer(1.3)>
+          "Physical Layer" // name
+          1.000000 // thickness
+          0 // graded
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          0 // active
+          1.000000 // trueactivethickness
+          88 88 176 1 1 // red green blue shading visible
+        end
+      end
+      begin <pdObjectList(1.0)> "ObjectLayers"
+        begin <pdMaskLayer(1.8)>
+          "Mask Layer" // name
+          2 1 0 // operation inverse fillgraded
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 0 1.000000 // topspec toplayerindex topy
+          1 0 0.000000 1.000000 // bottomspec bottomlayerindex bottomy depth
+          1 0 0.000000 1.000000 // etchstopspec etchstoplayerindex etchstopy etchdepth
+          1 5.710593 0.150000 0 0.000000 0.000000 0.000000 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+          "x" // profilegenericfunction
+          1 0 // perform2d mask2dgraded
+          1 3.500000 0.000000 1.000000 3.500000 3.500000 3.500000 0.000000 0.000000 0.000000 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          0 // active
+          1.000000 // trueactivethickness
+          0 0 176 1 1 // red green blue shading visible
+        end
+      end
+      begin <pdObjectList(1.0)> "SubFsDevices"
+      end
+      begin <pdObjectList(1.0)> "Objects"
+        begin <FsRectangle(1.2)>
+          0.208333 0.800000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.416667 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.800000 1.391667 -90.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.416667 0.200000 // sizez sizex
+        end
+        begin <pdModeExcitorZX(2.5)>
+          0.050000 0.800000 0.000000 // positionz positionx angle
+          0.400000 // sizex
+          1 0 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          2 0 1.000000 // yminspec yminlayer ymincoordinate
+          1.550000 1 1 256.000000 1.000000e+000 0.000000 // wavelength timeenvshape timeenvwidthspec timeenvwidth power phase
+          1 // polarisation
+          1 // modesolver
+          0 2 // modeorder profilemethod
+          "" // importfile
+        end
+        begin <FsRectangle(1.2)>
+          0.800000 0.208333 -90.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.416667 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          1.391667 0.800000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.416667 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.800000 0.800000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.033333 0.033333 // sizez sizex
+        end
+        begin <pdSensorZX(1.3)>
+          1.550000 0.800000 0.000000 // positionz positionx angle
+          0.500000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Sensor 1" // name
+          1 // transformtype
+        end
+        begin <pdSensorZX(1.3)>
+          0.075000 0.800000 0.000000 // positionz positionx angle
+          1.000000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Sensor 2" // name
+          1 // transformtype
+        end
+        begin <FsRectangle(1.2)>
+          0.633333 0.800000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.100000 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.800000 0.966667 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.200000 0.100000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.966667 0.800000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.100000 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.800000 0.633333 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.200000 0.100000 // sizez sizex
+        end
+        begin <pdSensorZX(1.3)>
+          0.800000 1.550000 90.000000 // positionz positionx angle
+          0.500000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Copy of Copy of Sensor 1" // name
+          1 // transformtype
+        end
+      end
+      begin <pdObjectList(1.0)> "Constraints"
+        begin <pdCartesianConstraint(1.0)>
+          3 1 4 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 -0.050000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          7 5 6 6 // subobjectindex domobjectindex subalignment domalignment
+          1 1 0.050000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          8 1 4 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 -0.075000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          13 2 6 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 0.000000 0.050000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+      end
+      begin <pdFDTDParameters(1.17)>
+        2 1 4096.000000 0.000000 // numdimensions durationspec duration centralwavelength
+        1 0.050000 // gridtype gridspacing
+        8 1 1.000000 2.000000 // pmlthickness pmlstructure pmlfactor pmlexponent
+        1 // boundarycondition
+        0 // overridexneg
+        0 // overridexpos
+        0 // overrideyneg
+        0 // overrideypos
+        0 // overridezneg
+        0 // overridezpos
+        1.350000 1.750000 10.000000 10.000000 // minwavelength maxwavelength mixingtolerance epsilontolerance
+        0.050000 10000.000000 0.050000 0.010000 // gradingrixtolerance gradingalphatolerance gradingpermeabilitytolerance gradingparamtolerance
+        begin <pdFDTDMaterialParamsDatabase(1.1)>
+          0 // numentries
+        end
+        0.500000 4 0 100.000000 2.000000 // sensorminwavelength sensortimeundersample sensorintegrateflux sensorspectrumrange sensorspectrumstepsfac
+        1 1.000000 0.000000 1 // fourierspec fourierstart fourierlength fourierwindow
+        begin <pdScannerParameters(1.0)>
+          0 // scannerenabled
+          "x" // scanvariablename
+          0.000000 1.000000 0.100000 // scanvariablefrom scanvariableto scanvariablestep
+          0 // numscanneractions
+        end
+        begin <pdActiveFDTDParameters(1.2)>
+          1.000000 // carrieraccelfactor
+          1 // carrierspatialresolution
+          0.000000 // initialcarrierdensity
+        end
+      end
+      begin <pdFDParameters(1.4)>
+        1 0.020000 0.980000 1.550000 // discretisation resolution priority wavelength
+        1 1 1 1 // boundaryconditionsleft boundaryconditionsright boundaryconditionsbottom boundaryconditionstop
+        1.000000 1.000000 1.000000 1.000000 // pmlthicknessleft pmlthicknessright pmlthicknessbottom pmlthicknesstop
+        begin <pdScannerParameters(1.0)>
+          0 // scannerenabled
+          "x" // scanvariablename
+          0.000000 1.000000 0.100000 // scanvariablefrom scanvariableto scanvariablestep
+          0 // numscanneractions
+        end
+      end
+      0 // mlengineparameters
+      1 // growall
+      1 1.000000 0.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 // background3dspec background3drix background3dalpha background3dpermeability background3drixx background3drixyy background3drixzz background3drixxy background3drixxz background3drixyz
+      "" // materialname
+      0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+      1 1.000000 0.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 // background2dspec background2drix background2dalpha background2dpermeability background2drixx background2drixyy background2drixzz background2drixxy background2drixxz background2drixyz
+      "" // materialname
+      0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+      7 // refsensorindex
+      1 1 // computationallayervisible instrumentlayervisible
+      1 // constraintlayervisible
+      1 // sectionlayervisible
+      0 0 // structurelayervisible fieldlayervisible
+      0 // carrierlayervisible
+      1 0 0 1.000000 1.000000 // grid... shown linesshown linesminorshown spacingz spacingx
+      0 0.100000 0.100000 // snap... enabled spacingz spacingx
+    end
+  end
+  begin <pdEditorProject(1.0)> "Example 3"
+    begin <FsDevice(1.10)> "Device 3"
+      0.000000 1.400000 0.000000 1.400000 // zmin zmax xmin xmax
+      25.000000 // temperature
+      "" // materialsdatabase
+      begin <pdObjectList(1.0)> "PhysicalLayers"
+        begin <pdPhysicalLayer(1.3)>
+          "Physical Layer" // name
+          1.000000 // thickness
+          0 // graded
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          0 // active
+          1.000000 // trueactivethickness
+          88 88 176 1 1 // red green blue shading visible
+        end
+      end
+      begin <pdObjectList(1.0)> "ObjectLayers"
+        begin <pdMaskLayer(1.8)>
+          "Mask Layer" // name
+          2 1 0 // operation inverse fillgraded
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 0 1.000000 // topspec toplayerindex topy
+          1 0 0.000000 1.000000 // bottomspec bottomlayerindex bottomy depth
+          1 0 0.000000 1.000000 // etchstopspec etchstoplayerindex etchstopy etchdepth
+          1 5.710593 0.150000 0 0.000000 0.000000 0.000000 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+          "x" // profilegenericfunction
+          1 0 // perform2d mask2dgraded
+          1 3.500000 0.000000 1.000000 3.500000 3.500000 3.500000 0.000000 0.000000 0.000000 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          0 // active
+          1.000000 // trueactivethickness
+          0 0 176 1 1 // red green blue shading visible
+        end
+      end
+      begin <pdObjectList(1.0)> "SubFsDevices"
+      end
+      begin <pdObjectList(1.0)> "Objects"
+        begin <FsRectangle(1.2)>
+          "(0.7-SqSize1/2-Gap1)/2" 0.700000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          "0.7-SqSize1/2-Gap1" 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.700000 "1.4-(0.7-SqSize1/2-Gap1)/2" -90.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          "0.7-SqSize1/2-Gap1" 0.200000 // sizez sizex
+        end
+        begin <pdModeExcitorZX(2.5)>
+          0.050000 0.700000 0.000000 // positionz positionx angle
+          0.400000 // sizex
+          1 0 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          2 0 1.000000 // yminspec yminlayer ymincoordinate
+          1.550000 1 1 256.000000 1.000000e+000 0.000000 // wavelength timeenvshape timeenvwidthspec timeenvwidth power phase
+          1 // polarisation
+          1 // modesolver
+          0 2 // modeorder profilemethod
+          "" // importfile
+        end
+        begin <FsRectangle(1.2)>
+          0.700000 "(0.7-SqSize1/2-Gap1)/2" -90.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          "0.7-SqSize1/2-Gap1" 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          "1.4-(0.7-SqSize1/2-Gap1)/2" 0.700000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          "0.7-SqSize1/2-Gap1" 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.700000 0.700000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.150000 0.150000 // sizez sizex
+        end
+        begin <pdSensorZX(1.3)>
+          1.350000 0.700000 0.000000 // positionz positionx angle
+          0.500000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Sensor 1" // name
+          1 // transformtype
+        end
+        begin <pdSensorZX(1.3)>
+          0.075000 0.700000 0.000000 // positionz positionx angle
+          1.000000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Sensor 2" // name
+          1 // transformtype
+        end
+        begin <FsRectangle(1.2)>
+          0.425000 0.975000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.150000 0.150000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.975000 0.975000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.150000 0.150000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.975000 0.425000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.150000 0.150000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.425000 0.425000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.150000 0.150000 // sizez sizex
+        end
+        begin <pdSensorZX(1.3)>
+          0.700000 1.350000 90.000000 // positionz positionx angle
+          0.500000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Copy of Copy of Sensor 1" // name
+          1 // transformtype
+        end
+      end
+      begin <pdObjectList(1.0)> "Constraints"
+        begin <pdCartesianConstraint(1.0)>
+          3 1 4 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 -0.050000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          7 5 6 6 // subobjectindex domobjectindex subalignment domalignment
+          1 1 0.050000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          8 1 4 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 -0.075000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          13 2 4 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 0.000000 0.050000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+      end
+      begin <pdFDTDParameters(1.17)>
+        2 1 4096.000000 0.000000 // numdimensions durationspec duration centralwavelength
+        1 0.050000 // gridtype gridspacing
+        8 1 1.000000 2.000000 // pmlthickness pmlstructure pmlfactor pmlexponent
+        1 // boundarycondition
+        0 // overridexneg
+        0 // overridexpos
+        0 // overrideyneg
+        0 // overrideypos
+        0 // overridezneg
+        0 // overridezpos
+        1.350000 1.750000 10.000000 10.000000 // minwavelength maxwavelength mixingtolerance epsilontolerance
+        0.050000 10000.000000 0.050000 0.010000 // gradingrixtolerance gradingalphatolerance gradingpermeabilitytolerance gradingparamtolerance
+        begin <pdFDTDMaterialParamsDatabase(1.1)>
+          0 // numentries
+        end
+        0.500000 4 0 100.000000 2.000000 // sensorminwavelength sensortimeundersample sensorintegrateflux sensorspectrumrange sensorspectrumstepsfac
+        1 1.000000 0.000000 1 // fourierspec fourierstart fourierlength fourierwindow
+        begin <pdScannerParameters(1.0)>
+          0 // scannerenabled
+          "x" // scanvariablename
+          0.000000 1.000000 0.100000 // scanvariablefrom scanvariableto scanvariablestep
+          0 // numscanneractions
+        end
+        begin <pdActiveFDTDParameters(1.2)>
+          1.000000 // carrieraccelfactor
+          1 // carrierspatialresolution
+          0.000000 // initialcarrierdensity
+        end
+      end
+      begin <pdFDParameters(1.4)>
+        1 0.020000 0.980000 1.550000 // discretisation resolution priority wavelength
+        1 1 1 1 // boundaryconditionsleft boundaryconditionsright boundaryconditionsbottom boundaryconditionstop
+        1.000000 1.000000 1.000000 1.000000 // pmlthicknessleft pmlthicknessright pmlthicknessbottom pmlthicknesstop
+        begin <pdScannerParameters(1.0)>
+          0 // scannerenabled
+          "x" // scanvariablename
+          0.000000 1.000000 0.100000 // scanvariablefrom scanvariableto scanvariablestep
+          0 // numscanneractions
+        end
+      end
+      0 // mlengineparameters
+      1 // growall
+      1 1.000000 0.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 // background3dspec background3drix background3dalpha background3dpermeability background3drixx background3drixyy background3drixzz background3drixxy background3drixxz background3drixyz
+      "" // materialname
+      0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+      1 1.000000 0.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 // background2dspec background2drix background2dalpha background2dpermeability background2drixx background2drixyy background2drixzz background2drixxy background2drixxz background2drixyz
+      "" // materialname
+      0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+      7 // refsensorindex
+      1 1 // computationallayervisible instrumentlayervisible
+      1 // constraintlayervisible
+      1 // sectionlayervisible
+      0 0 // structurelayervisible fieldlayervisible
+      0 // carrierlayervisible
+      1 0 0 1.000000 1.000000 // grid... shown linesshown linesminorshown spacingz spacingx
+      0 0.100000 0.100000 // snap... enabled spacingz spacingx
+    end
+    begin <FPOptimiser(1.2)> "KALLISTOS 3"
+      PRJITEMNAME : "Device 3"
+      PRECISION : 0.0001
+      MAXFUNCEVALS : 0
+      MAXIMISE : 1
+      OPTMETHOD : 2
+      OBJFUNCTYPE : Positive Flux
+      ANALYTICMETHOD : 0
+      BOXSIZE : 0.000000
+      INDEPENDENTVAR : SqSize1 0 0.3 0.15
+      INDEPENDENTVAR : Gap1 0 0.3 0.15
+      INDEPENDENTVAR : SqSize2 0 0.3 0.15
+      INDEPENDENTVAR : Gap2 0 0.3 0.15
+      begin <FPOptimiserObjFuncData(1.0)> "Positive Flux"
+        CALC_COMMAND : "fsdevice.calculatefd()" 
+        CALC_COMMAND : "fsdevice.getfluxfd(8, 2)" ref_flux
+        CALC_COMMAND : "fsdevice.getfluxfd(7, 2)" Transmission
+        CALC_COMMAND : "fsdevice.getfluxfd(13, 2)" cross_talk
+        OBJECTIVE : (Transmission-cross_talk)/ref_flux
+      end
+    end
+    begin <FsDevice(1.10)> "Device 3_opt"
+      0.000000 1.400000 0.000000 1.400000 // zmin zmax xmin xmax
+      25.000000 // temperature
+      "" // materialsdatabase
+      begin <pdObjectList(1.0)> "PhysicalLayers"
+        begin <pdPhysicalLayer(1.3)>
+          "Physical Layer" // name
+          1.000000 // thickness
+          0 // graded
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          0 // active
+          1.000000 // trueactivethickness
+          88 88 176 1 1 // red green blue shading visible
+        end
+      end
+      begin <pdObjectList(1.0)> "ObjectLayers"
+        begin <pdMaskLayer(1.8)>
+          "Mask Layer" // name
+          2 1 0 // operation inverse fillgraded
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 0 1.000000 // topspec toplayerindex topy
+          1 0 0.000000 1.000000 // bottomspec bottomlayerindex bottomy depth
+          1 0 0.000000 1.000000 // etchstopspec etchstoplayerindex etchstopy etchdepth
+          1 5.710593 0.150000 0 0.000000 0.000000 0.000000 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+          "x" // profilegenericfunction
+          1 0 // perform2d mask2dgraded
+          1 3.500000 0.000000 1.000000 3.500000 3.500000 3.500000 0.000000 0.000000 0.000000 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          1 2.500000 0.000000 1.000000 2.500000 2.500000 2.500000 0.000000 0.000000 0.000000 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+          "" // materialname
+          0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+          0 // active
+          1.000000 // trueactivethickness
+          0 0 176 1 1 // red green blue shading visible
+        end
+      end
+      begin <pdObjectList(1.0)> "SubFsDevices"
+      end
+      begin <pdObjectList(1.0)> "Objects"
+        begin <FsRectangle(1.2)>
+          0.262500 0.700000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.525000 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.700000 1.137500 -90.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.525000 0.200000 // sizez sizex
+        end
+        begin <pdModeExcitorZX(2.5)>
+          0.050000 0.700000 0.000000 // positionz positionx angle
+          0.400000 // sizex
+          1 0 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          2 0 1.000000 // yminspec yminlayer ymincoordinate
+          1.550000 1 1 256.000000 1.000000e+000 0.000000 // wavelength timeenvshape timeenvwidthspec timeenvwidth power phase
+          1 // polarisation
+          1 // modesolver
+          0 2 // modeorder profilemethod
+          "" // importfile
+        end
+        begin <FsRectangle(1.2)>
+          0.700000 0.262500 -90.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.525000 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          1.137500 0.700000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.525000 0.200000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.700000 0.700000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.050000 0.050000 // sizez sizex
+        end
+        begin <pdSensorZX(1.3)>
+          1.350000 0.700000 0.000000 // positionz positionx angle
+          0.500000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Sensor 1" // name
+          1 // transformtype
+        end
+        begin <pdSensorZX(1.3)>
+          0.075000 0.700000 0.000000 // positionz positionx angle
+          1.000000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Sensor 2" // name
+          1 // transformtype
+        end
+        begin <FsRectangle(1.2)>
+          0.375000 1.025000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.150000 0.150000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          1.025000 1.025000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.150000 0.150000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          1.025000 0.375000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.150000 0.150000 // sizez sizex
+        end
+        begin <FsRectangle(1.2)>
+          0.375000 0.375000 0.000000 // positionz positionx angle
+          1 // objectlayerindex
+          0 // negative
+          1 // grading
+          "x*x + y*y + z*z" // gradinggenericfunction
+          "" // gradingfilepath
+          0 // resizetogradingfile
+          0.150000 0.150000 // sizez sizex
+        end
+        begin <pdSensorZX(1.3)>
+          0.700000 1.350000 90.000000 // positionz positionx angle
+          0.500000 // sizex
+          3 1 1.000000 // ymaxspec ymaxlayer ymaxcoordinate
+          5 1 1.000000 // yminspec yminlayer ymincoordinate
+          "Copy of Copy of Sensor 1" // name
+          1 // transformtype
+        end
+      end
+      begin <pdObjectList(1.0)> "Constraints"
+        begin <pdCartesianConstraint(1.0)>
+          3 1 4 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 -0.050000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          7 5 6 6 // subobjectindex domobjectindex subalignment domalignment
+          1 1 0.050000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          8 1 4 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 -0.075000 0.000000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+        begin <pdCartesianConstraint(1.0)>
+          13 2 4 4 // subobjectindex domobjectindex subalignment domalignment
+          1 1 0.000000 0.050000 // constrainhorizontal constrainvertical horizontalextent verticalextent
+        end
+      end
+      begin <pdFDTDParameters(1.17)>
+        2 1 4096.000000 0.000000 // numdimensions durationspec duration centralwavelength
+        1 0.050000 // gridtype gridspacing
+        8 1 1.000000 2.000000 // pmlthickness pmlstructure pmlfactor pmlexponent
+        1 // boundarycondition
+        0 // overridexneg
+        0 // overridexpos
+        0 // overrideyneg
+        0 // overrideypos
+        0 // overridezneg
+        0 // overridezpos
+        1.350000 1.750000 10.000000 10.000000 // minwavelength maxwavelength mixingtolerance epsilontolerance
+        0.050000 10000.000000 0.050000 0.010000 // gradingrixtolerance gradingalphatolerance gradingpermeabilitytolerance gradingparamtolerance
+        begin <pdFDTDMaterialParamsDatabase(1.1)>
+          0 // numentries
+        end
+        0.500000 4 0 100.000000 2.000000 // sensorminwavelength sensortimeundersample sensorintegrateflux sensorspectrumrange sensorspectrumstepsfac
+        1 1.000000 0.000000 1 // fourierspec fourierstart fourierlength fourierwindow
+        begin <pdScannerParameters(1.0)>
+          0 // scannerenabled
+          "x" // scanvariablename
+          0.000000 1.000000 0.100000 // scanvariablefrom scanvariableto scanvariablestep
+          0 // numscanneractions
+        end
+        begin <pdActiveFDTDParameters(1.2)>
+          1.000000 // carrieraccelfactor
+          1 // carrierspatialresolution
+          0.000000 // initialcarrierdensity
+        end
+      end
+      begin <pdFDParameters(1.4)>
+        1 0.020000 0.980000 1.550000 // discretisation resolution priority wavelength
+        1 1 1 1 // boundaryconditionsleft boundaryconditionsright boundaryconditionsbottom boundaryconditionstop
+        1.000000 1.000000 1.000000 1.000000 // pmlthicknessleft pmlthicknessright pmlthicknessbottom pmlthicknesstop
+        begin <pdScannerParameters(1.0)>
+          0 // scannerenabled
+          "x" // scanvariablename
+          0.000000 1.000000 0.100000 // scanvariablefrom scanvariableto scanvariablestep
+          0 // numscanneractions
+        end
+      end
+      0 // mlengineparameters
+      1 // growall
+      1 1.000000 0.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 // background3dspec background3drix background3dalpha background3dpermeability background3drixx background3drixyy background3drixzz background3drixxy background3drixxz background3drixyz
+      "" // materialname
+      0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+      1 1.000000 0.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 // background2dspec background2drix background2dalpha background2dpermeability background2drixx background2drixyy background2drixzz background2drixxy background2drixxz background2drixyz
+      "" // materialname
+      0 0 0.000000 0.000000 // hasxparam hasyparam xparam yparam
+      7 // refsensorindex
+      1 1 // computationallayervisible instrumentlayervisible
+      1 // constraintlayervisible
+      1 // sectionlayervisible
+      0 0 // structurelayervisible fieldlayervisible
+      0 // carrierlayervisible
+      1 0 0 1.000000 1.000000 // grid... shown linesshown linesminorshown spacingz spacingx
+      0 0.100000 0.100000 // snap... enabled spacingz spacingx
+    end
+  end
+  begin <pdVariablesNode(1.0)> "Variables 1"
+    SqSize = 0.15
+    GapLength = 0.15
+    Gap1 = 0.1
+    Gap2 = 0.1
+    L1 = 0.1
+    SqSize1 = 0.15
+    SqSize2 = 0.15
+  end
+end

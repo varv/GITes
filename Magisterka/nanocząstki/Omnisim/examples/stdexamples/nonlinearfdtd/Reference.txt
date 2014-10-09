@@ -1,0 +1,4 @@
+[1] N. Nozhat, A. Taher Rahmati and N. Granpayeh, "An All Optical Switch Based on Nonlinear Photonic Crystal Microcavities", PIERS Proceedings 2009
+
+This example is described on our website:
+http://www.photond.com/products/crystalwave/crystalwave_applications_05.htm

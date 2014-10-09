@@ -1,0 +1,5 @@
+Example based on a structure from:
+R. Halir, A. Maese-Novo, A. Ortega-Moñux, I. Molina-Fernández, J. G.Wangüemert-Pérez, P. Cheben, D.-X. Xu, J. H. Schmid and S. Janz, "Colorless directional coupler with dispersion engineered sub-wavelength structure", Optics Express, 20, 12, pp. 13470-13477 (2012)
+
+This example is described on our website:
+http://www.photond.com/products/omnisim/omnisim_applications_04.htm

@@ -1,0 +1,615 @@
+begin <pdApplicationInfo(1.1)>
+  OmniSim + CrystalWave 5.0 beta 1 // applicationname applicationversion
+  765 // licensenumber
+  6.1 (64 bit) 20471.17 // windowsversion RAM_in_MB 
+  21/06/2014 14:52:41 // savedate(dd/mm/yyyy) savetime(hh:mm:ss)
+end
+begin <pdEditorProject(1.0)> "GoldNanoparticles"
+  begin <FsDevice(1.11)> "Gold_800nm_particle_3D"
+    0 4 -2 2 // zmin zmax xmin xmax
+    25 // temperature
+    "refbase.mat" // materialsdatabase
+    begin <pdObjectList(1.0)> "PhysicalLayers"
+      begin <pdPhysicalLayer(1.3)>
+        "Physical Layer" // name
+        4 // thickness
+        0 // graded
+        1 1 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        88 88 176 1 1 // red green blue shading visible
+      end
+    end
+    begin <pdObjectList(1.0)> "ObjectLayers"
+      begin <pdObject3DLayer(1.1)>
+        "3D Object Layer" // name
+        0 // grading
+        3 0.562463 797826.58 1 0.562463 0.562463 0.562463 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "gold" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        176 0 0 1 1 // red green blue shading visible
+      end
+    end
+    begin <pdObjectList(1.0)> "SubFsDevices"
+    end
+    begin <pdObjectList(1.0)> "Objects"
+      begin <FsEllipsoid(1.2)>
+        2 0 0 // positionz positionx angle
+        2 // positiony
+        1 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        0.8 0.8 // sizez sizex
+        0.8 // sizey
+        begin <pdShapeSubGridRegion(1.0)>
+          4 0.3 0.3 0.3 // factor borderz borderx bordery
+        end
+      end
+      begin <pdGaussianExcitorZX(1.5)>
+        0.5 0 0 // positionz positionx angle
+        2 // sizex
+        6 0 3 // ymaxspec ymaxlayer ymaxcoordinate
+        6 0 1 // yminspec yminlayer ymincoordinate
+        3 2 20 0 // timeenvshape timeenvwidthspec timeenvwidth timeenvdelay
+        "" // timeenvfunction
+        1 1.55 "" 0 1.000000e+000 // chirpswitch wavelength endwavelength phase power
+        "" // phasefunction
+        1 // polarisation
+      end
+      begin <pdEndSection(1.0)>
+        2 // positionz
+      end
+      begin <pdSensorZX(1.3)>
+        2 1.506382 90 // positionz positionx angle
+        1 // sizex
+        3 1 1 // ymaxspec ymaxlayer ymaxcoordinate
+        5 1 1 // yminspec yminlayer ymincoordinate
+        "Sensor 1" // name
+        1 // transformtype
+      end
+      begin <pdSensorZX(1.3)>
+        0.647797 -0.052812 180 // positionz positionx angle
+        0.533143 // sizex
+        3 1 1 // ymaxspec ymaxlayer ymaxcoordinate
+        5 1 1 // yminspec yminlayer ymincoordinate
+        "Sensor 2" // name
+        1 // transformtype
+      end
+    end
+    begin <pdObjectList(1.0)> "Constraints"
+    end
+    begin <pdFDTDParameters(1.17)>
+      3 2 50 0 // numdimensions durationspec duration centralwavelength
+      1 0.05 // gridtype gridspacing
+      8 1 1 2 // pmlthickness pmlstructure pmlfactor pmlexponent
+      1 // boundarycondition
+      0 // overridexneg
+      0 // overridexpos
+      0 // overrideyneg
+      0 // overrideypos
+      0 // overridezneg
+      0 // overridezpos
+      0 0 10 10 // minwavelength maxwavelength mixingtolerance epsilontolerance
+      0.05 10000 0.05 0.01 // gradingrixtolerance gradingalphatolerance gradingpermeabilitytolerance gradingparamtolerance
+      begin <pdFDTDMaterialParamsDatabase(1.1)>
+        0 // numentries
+      end
+      0 4 0 100 2 // sensorminwavelength sensortimeundersample sensorintegrateflux sensorspectrumrange sensorspectrumstepsfac
+      1 1 0 1 // fourierspec fourierstart fourierlength fourierwindow
+      begin <pdScannerParameters(1.0)>
+        0 // scannerenabled
+        "x" // scanvariablename
+        0 1 0.1 // scanvariablefrom scanvariableto scanvariablestep
+        0 // numscanneractions
+      end
+      begin <pdActiveFDTDParameters(1.2)>
+        1 // carrieraccelfactor
+        1 // carrierspatialresolution
+        0 // initialcarrierdensity
+      end
+    end
+    begin <pdFDParameters(1.4)>
+      1 0.05 0.98 1.55 // discretisation resolution priority wavelength
+      1 1 1 1 // boundaryconditionsleft boundaryconditionsright boundaryconditionsbottom boundaryconditionstop
+      1 1 1 1 // pmlthicknessleft pmlthicknessright pmlthicknessbottom pmlthicknesstop
+      begin <pdScannerParameters(1.0)>
+        0 // scannerenabled
+        "x" // scanvariablename
+        0 1 0.1 // scanvariablefrom scanvariableto scanvariablestep
+        0 // numscanneractions
+      end
+    end
+    0 // mlengineparameters
+    0 // growall
+    1 1 0 1 1 1 1 0 0 0 // background3dspec background3drix background3dalpha background3dpermeability background3drixx background3drixyy background3drixzz background3drixxy background3drixxz background3drixyz
+    "" // materialname
+    0 0 0 0 // hasxparam hasyparam xparam yparam
+    1 1 0 1 1 1 1 0 0 0 // background2dspec background2drix background2dalpha background2dpermeability background2drixx background2drixyy background2drixzz background2drixxy background2drixxz background2drixyz
+    "" // materialname
+    0 0 0 0 // hasxparam hasyparam xparam yparam
+    4 // refsensorindex
+    1 1 // computationallayervisible instrumentlayervisible
+    1 // constraintlayervisible
+    1 // sectionlayervisible
+    0 0 // structurelayervisible fieldlayervisible
+    0 // carrierlayervisible
+    1 0 0 1.000000 1.000000 // grid... shown linesshown linesminorshown spacingz spacingx
+    0 0.100000 0.100000 // snap... enabled spacingz spacingx
+    begin <pdObjectList(1.0)> "EngineParameters"
+      begin <pdFETDParameters(1.2)>
+        3 2 50 0 // numdimensions durationspec duration centralwavelength
+        0 0 // minwavelength maxwavelength
+        1 // meshtypefetd
+        0.2 // mesh
+        1 // timestepoverride
+        0.98 // meshpriorityfetd
+        2 // eltorder
+        2 // pmlthickness
+        3 // boundarycondition
+        0 // overridezneg
+        0 // overridezpos
+        0 // overridexneg
+        0 // overridexpos
+        0 // overrideyneg
+        0 // overrideypos
+        0 1 0 100 2 // sensorminwavelength sensortimeundersample sensorintegrateflux sensorspectrumrange sensorspectrumstepsfac
+        1 0 0 1 // fourierspec fourierstart fourierlength fourierwindow
+      end
+    end
+  end
+  begin <FsDevice(1.11)> "Gold_800nm_particle_2D"
+    0 4 -2 2 // zmin zmax xmin xmax
+    25 // temperature
+    "refbase.mat" // materialsdatabase
+    begin <pdObjectList(1.0)> "PhysicalLayers"
+      begin <pdPhysicalLayer(1.3)>
+        "Physical Layer" // name
+        4 // thickness
+        0 // graded
+        1 1 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        88 88 176 1 1 // red green blue shading visible
+      end
+    end
+    begin <pdObjectList(1.0)> "ObjectLayers"
+      begin <pdMaskLayer(1.8)>
+        "Mask Layer" // name
+        2 0 0 // operation inverse fillgraded
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 0 1 // topspec toplayerindex topy
+        1 0 1 1 // bottomspec bottomlayerindex bottomy depth
+        1 0 0 1 // etchstopspec etchstoplayerindex etchstopy etchdepth
+        1 5 0.15 0 0 0 0 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+        "x" // profilegenericfunction
+        1 0 // perform2d mask2dgraded
+        3 0.56246309 797826.58 1 0.56246309 0.56246309 0.56246309 0 0 0 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+        "gold" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        176 0 0 1 1 // red green blue shading visible
+      end
+    end
+    begin <pdObjectList(1.0)> "SubFsDevices"
+    end
+    begin <pdObjectList(1.0)> "Objects"
+      begin <pdGaussianExcitorZX(1.5)>
+        0.5 0 0 // positionz positionx angle
+        2 // sizex
+        6 0 3 // ymaxspec ymaxlayer ymaxcoordinate
+        6 0 1 // yminspec yminlayer ymincoordinate
+        3 2 30 0 // timeenvshape timeenvwidthspec timeenvwidth timeenvdelay
+        "" // timeenvfunction
+        1 1.16 "" 0 1.000000e+000 // chirpswitch wavelength endwavelength phase power
+        "" // phasefunction
+        1 // polarisation
+      end
+      begin <pdEndSection(1.0)>
+        1.246874 // positionz
+      end
+      begin <FsEllipse(1.2)>
+        2 0 0 // positionz positionx angle
+        1 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        0.8 0.8 // sizez sizex
+        begin <pdShapeSubGridRegion(1.0)>
+          8 0.3 0.3 0.3 // factor borderz borderx bordery
+        end
+      end
+      begin <pdSensorZX(1.3)>
+        2.041569 1.833309 90 // positionz positionx angle
+        0.283644 // sizex
+        3 1 1 // ymaxspec ymaxlayer ymaxcoordinate
+        5 1 1 // yminspec yminlayer ymincoordinate
+        "Sensor 1" // name
+        1 // transformtype
+      end
+      begin <pdSensorZX(1.3)>
+        0.6 0 0 // positionz positionx angle
+        0.694093 // sizex
+        3 1 1 // ymaxspec ymaxlayer ymaxcoordinate
+        5 1 1 // yminspec yminlayer ymincoordinate
+        "Sensor 2" // name
+        1 // transformtype
+      end
+    end
+    begin <pdObjectList(1.0)> "Constraints"
+    end
+    begin <pdFDTDParameters(1.17)>
+      2 2 100 0 // numdimensions durationspec duration centralwavelength
+      1 0.05 // gridtype gridspacing
+      8 1 1 2 // pmlthickness pmlstructure pmlfactor pmlexponent
+      1 // boundarycondition
+      0 // overridexneg
+      0 // overridexpos
+      0 // overrideyneg
+      0 // overrideypos
+      0 // overridezneg
+      0 // overridezpos
+      0 0 10 10 // minwavelength maxwavelength mixingtolerance epsilontolerance
+      0.05 10000 0.05 0.01 // gradingrixtolerance gradingalphatolerance gradingpermeabilitytolerance gradingparamtolerance
+      begin <pdFDTDMaterialParamsDatabase(1.1)>
+        0 // numentries
+      end
+      0 4 0 100 2 // sensorminwavelength sensortimeundersample sensorintegrateflux sensorspectrumrange sensorspectrumstepsfac
+      1 1 0 1 // fourierspec fourierstart fourierlength fourierwindow
+      begin <pdScannerParameters(1.0)>
+        0 // scannerenabled
+        "x" // scanvariablename
+        0 1 0.1 // scanvariablefrom scanvariableto scanvariablestep
+        0 // numscanneractions
+      end
+      begin <pdActiveFDTDParameters(1.2)>
+        1 // carrieraccelfactor
+        1 // carrierspatialresolution
+        0 // initialcarrierdensity
+      end
+    end
+    begin <pdFDParameters(1.4)>
+      1 0.05 0.98 1.55 // discretisation resolution priority wavelength
+      1 1 1 1 // boundaryconditionsleft boundaryconditionsright boundaryconditionsbottom boundaryconditionstop
+      1 1 1 1 // pmlthicknessleft pmlthicknessright pmlthicknessbottom pmlthicknesstop
+      begin <pdScannerParameters(1.0)>
+        0 // scannerenabled
+        "x" // scanvariablename
+        0 1 0.1 // scanvariablefrom scanvariableto scanvariablestep
+        0 // numscanneractions
+      end
+    end
+    0 // mlengineparameters
+    0 // growall
+    1 1 0 1 1 1 1 0 0 0 // background3dspec background3drix background3dalpha background3dpermeability background3drixx background3drixyy background3drixzz background3drixxy background3drixxz background3drixyz
+    "" // materialname
+    0 0 0 0 // hasxparam hasyparam xparam yparam
+    1 1 0 1 1 1 1 0 0 0 // background2dspec background2drix background2dalpha background2dpermeability background2drixx background2drixyy background2drixzz background2drixxy background2drixxz background2drixyz
+    "" // materialname
+    0 0 0 0 // hasxparam hasyparam xparam yparam
+    5 // refsensorindex
+    1 1 // computationallayervisible instrumentlayervisible
+    1 // constraintlayervisible
+    1 // sectionlayervisible
+    0 0 // structurelayervisible fieldlayervisible
+    0 // carrierlayervisible
+    1 0 0 1.000000 1.000000 // grid... shown linesshown linesminorshown spacingz spacingx
+    0 0.100000 0.100000 // snap... enabled spacingz spacingx
+    begin <pdObjectList(1.0)> "EngineParameters"
+      begin <pdFETDParameters(1.2)>
+        2 2 100 0 // numdimensions durationspec duration centralwavelength
+        0 0 // minwavelength maxwavelength
+        1 // meshtypefetd
+        0.3 // mesh
+        1 // timestepoverride
+        0.98 // meshpriorityfetd
+        2 // eltorder
+        2 // pmlthickness
+        3 // boundarycondition
+        0 // overridezneg
+        0 // overridezpos
+        0 // overridexneg
+        0 // overridexpos
+        0 // overrideyneg
+        0 // overrideypos
+        0 1 0 100 2 // sensorminwavelength sensortimeundersample sensorintegrateflux sensorspectrumrange sensorspectrumstepsfac
+        1 0 0 1 // fourierspec fourierstart fourierlength fourierwindow
+      end
+    end
+  end
+  begin <FsDevice(1.11)> "Gold_80nm_particle_line_2D"
+    0 4.5 -2 2 // zmin zmax xmin xmax
+    25 // temperature
+    "refbase.mat" // materialsdatabase
+    begin <pdObjectList(1.0)> "PhysicalLayers"
+      begin <pdPhysicalLayer(1.3)>
+        "Physical Layer" // name
+        4 // thickness
+        0 // graded
+        1 1 0 1 2.5 2.5 2.5 0 0 0 // spec rix alpha permeability rixx rixyy rixzz rixxy rixxz rixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // gradedspec gradedrix gradedalpha gradedpermeability gradedrixx gradedrixyy gradedrixzz gradedrixxy gradedrixxz gradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        88 88 176 1 1 // red green blue shading visible
+      end
+    end
+    begin <pdObjectList(1.0)> "ObjectLayers"
+      begin <pdMaskLayer(1.8)>
+        "Mask Layer" // name
+        2 0 0 // operation inverse fillgraded
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillspec fillrix fillalpha fillpermeability fillrixx fillrixyy fillrixzz fillrixxy fillrixxz fillrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // fillgradedspec fillgradedrix fillgradedalpha fillgradedpermeability fillgradedrixx fillgradedrixyy fillgradedrixzz fillgradedrixxy fillgradedrixxz fillgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 0 1 // topspec toplayerindex topy
+        1 0 1 1 // bottomspec bottomlayerindex bottomy depth
+        1 0 0 1 // etchstopspec etchstoplayerindex etchstopy etchdepth
+        1 5 0.15 0 0 0 0 // profile profiletaperangle profileroundradius profileanisotropic profileanisotropicdirection profiletiltangle profiletiltdirection
+        "x" // profilegenericfunction
+        1 0 // perform2d mask2dgraded
+        3 0.56246309 797826.58 1 0.56246309 0.56246309 0.56246309 0 0 0 // mask2dspec mask2drix mask2dalpha mask2dpermeability mask2drixx mask2drixyy mask2drixzz mask2drixxy mask2drixxz mask2drixyz
+        "gold" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        1 2.5 0 1 2.5 2.5 2.5 0 0 0 // mask2dgradedspec mask2dgradedrix mask2dgradedalpha mask2dgradedpermeability mask2dgradedrixx mask2dgradedrixyy mask2dgradedrixzz mask2dgradedrixxy mask2dgradedrixxz mask2dgradedrixyz
+        "" // materialname
+        0 0 0 0 // hasxparam hasyparam xparam yparam
+        0 // active
+        1 // trueactivethickness
+        176 0 0 1 1 // red green blue shading visible
+      end
+    end
+    begin <pdObjectList(1.0)> "SubFsDevices"
+    end
+    begin <pdObjectList(1.0)> "Objects"
+      begin <pdGaussianExcitorZX(1.5)>
+        0.1 0 0 // positionz positionx angle
+        2 // sizex
+        6 0 3 // ymaxspec ymaxlayer ymaxcoordinate
+        6 0 1 // yminspec yminlayer ymincoordinate
+        3 2 30 0 // timeenvshape timeenvwidthspec timeenvwidth timeenvdelay
+        "" // timeenvfunction
+        1 1 "" 0 1.000000e+000 // chirpswitch wavelength endwavelength phase power
+        "" // phasefunction
+        1 // polarisation
+      end
+      begin <pdEndSection(1.0)>
+        1.246874 // positionz
+      end
+      begin <FsEllipse(1.2)>
+        0.5 0 0 // positionz positionx angle
+        1 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        "Dline" "Dline" // sizez sizex
+        begin <pdShapeSubGridRegion(1.0)>
+          32 0.1 0.1 0.1 // factor borderz borderx bordery
+        end
+      end
+      begin <pdSensorZX(1.3)>
+        2.041569 1.833309 90 // positionz positionx angle
+        0.283644 // sizex
+        3 1 1 // ymaxspec ymaxlayer ymaxcoordinate
+        5 1 1 // yminspec yminlayer ymincoordinate
+        "Sensor 1" // name
+        1 // transformtype
+      end
+      begin <pdSensorZX(1.3)>
+        0.198893 -0.002515 0 // positionz positionx angle
+        0.694093 // sizex
+        3 1 1 // ymaxspec ymaxlayer ymaxcoordinate
+        5 1 1 // yminspec yminlayer ymincoordinate
+        "Sensor 2" // name
+        1 // transformtype
+      end
+      begin <FsEllipse(1.2)>
+        1.5 0 0 // positionz positionx angle
+        1 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        "Dline" "Dline" // sizez sizex
+        begin <pdShapeSubGridRegion(1.0)>
+          64 0.1 0.1 0.1 // factor borderz borderx bordery
+        end
+      end
+      begin <FsEllipse(1.2)>
+        2.5 0 0 // positionz positionx angle
+        1 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        "Dline" "Dline" // sizez sizex
+        begin <pdShapeSubGridRegion(1.0)>
+          32 0.1 0.1 0.1 // factor borderz borderx bordery
+        end
+      end
+      begin <FsEllipse(1.2)>
+        3.5 0 0 // positionz positionx angle
+        1 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        "Dline" "Dline" // sizez sizex
+        begin <pdShapeSubGridRegion(1.0)>
+          32 0.1 0.1 0.1 // factor borderz borderx bordery
+        end
+      end
+      begin <FsEllipse(1.2)>
+        1 0 0 // positionz positionx angle
+        1 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        "Dline" "Dline" // sizez sizex
+        begin <pdShapeSubGridRegion(1.0)>
+          32 0.1 0.1 0.1 // factor borderz borderx bordery
+        end
+      end
+      begin <FsEllipse(1.2)>
+        2 0 0 // positionz positionx angle
+        1 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        "Dline" "Dline" // sizez sizex
+        begin <pdShapeSubGridRegion(1.0)>
+          64 0.1 0.1 0.1 // factor borderz borderx bordery
+        end
+      end
+      begin <FsEllipse(1.2)>
+        3 0 0 // positionz positionx angle
+        1 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        "Dline" "Dline" // sizez sizex
+        begin <pdShapeSubGridRegion(1.0)>
+          32 0.1 0.1 0.1 // factor borderz borderx bordery
+        end
+      end
+      begin <FsEllipse(1.2)>
+        4 0 0 // positionz positionx angle
+        1 // objectlayerindex
+        0 // negative
+        1 // grading
+        "x*x + y*y + z*z" // gradinggenericfunction
+        "" // gradingfilepath
+        0 // resizetogradingfile
+        "Dline" "Dline" // sizez sizex
+        begin <pdShapeSubGridRegion(1.0)>
+          32 0.1 0.1 0.1 // factor borderz borderx bordery
+        end
+      end
+    end
+    begin <pdObjectList(1.0)> "Constraints"
+    end
+    begin <pdFDTDParameters(1.17)>
+      2 2 100 0 // numdimensions durationspec duration centralwavelength
+      1 0.04 // gridtype gridspacing
+      8 1 1 2 // pmlthickness pmlstructure pmlfactor pmlexponent
+      1 // boundarycondition
+      0 // overridexneg
+      0 // overridexpos
+      0 // overrideyneg
+      0 // overrideypos
+      0 // overridezneg
+      0 // overridezpos
+      0 0 10 10 // minwavelength maxwavelength mixingtolerance epsilontolerance
+      0.05 10000 0.05 0.01 // gradingrixtolerance gradingalphatolerance gradingpermeabilitytolerance gradingparamtolerance
+      begin <pdFDTDMaterialParamsDatabase(1.1)>
+        0 // numentries
+      end
+      0 4 0 100 2 // sensorminwavelength sensortimeundersample sensorintegrateflux sensorspectrumrange sensorspectrumstepsfac
+      1 1 0 1 // fourierspec fourierstart fourierlength fourierwindow
+      begin <pdScannerParameters(1.0)>
+        0 // scannerenabled
+        "x" // scanvariablename
+        0 1 0.1 // scanvariablefrom scanvariableto scanvariablestep
+        0 // numscanneractions
+      end
+      begin <pdActiveFDTDParameters(1.2)>
+        1 // carrieraccelfactor
+        1 // carrierspatialresolution
+        0 // initialcarrierdensity
+      end
+    end
+    begin <pdFDParameters(1.4)>
+      1 0.05 0.98 1.55 // discretisation resolution priority wavelength
+      1 1 1 1 // boundaryconditionsleft boundaryconditionsright boundaryconditionsbottom boundaryconditionstop
+      1 1 1 1 // pmlthicknessleft pmlthicknessright pmlthicknessbottom pmlthicknesstop
+      begin <pdScannerParameters(1.0)>
+        0 // scannerenabled
+        "x" // scanvariablename
+        0 1 0.1 // scanvariablefrom scanvariableto scanvariablestep
+        0 // numscanneractions
+      end
+    end
+    0 // mlengineparameters
+    0 // growall
+    1 1 0 1 1 1 1 0 0 0 // background3dspec background3drix background3dalpha background3dpermeability background3drixx background3drixyy background3drixzz background3drixxy background3drixxz background3drixyz
+    "" // materialname
+    0 0 0 0 // hasxparam hasyparam xparam yparam
+    1 1 0 1 1 1 1 0 0 0 // background2dspec background2drix background2dalpha background2dpermeability background2drixx background2drixyy background2drixzz background2drixxy background2drixxz background2drixyz
+    "" // materialname
+    0 0 0 0 // hasxparam hasyparam xparam yparam
+    5 // refsensorindex
+    1 1 // computationallayervisible instrumentlayervisible
+    1 // constraintlayervisible
+    1 // sectionlayervisible
+    0 0 // structurelayervisible fieldlayervisible
+    0 // carrierlayervisible
+    1 0 0 1.000000 1.000000 // grid... shown linesshown linesminorshown spacingz spacingx
+    0 0.100000 0.100000 // snap... enabled spacingz spacingx
+    begin <pdObjectList(1.0)> "EngineParameters"
+      begin <pdFETDParameters(1.2)>
+        2 2 100 0 // numdimensions durationspec duration centralwavelength
+        0 0 // minwavelength maxwavelength
+        1 // meshtypefetd
+        0.2 // mesh
+        1 // timestepoverride
+        0.98 // meshpriorityfetd
+        2 // eltorder
+        2 // pmlthickness
+        3 // boundarycondition
+        0 // overridezneg
+        0 // overridezpos
+        0 // overridexneg
+        0 // overridexpos
+        0 // overrideyneg
+        0 // overrideypos
+        0 1 0 100 2 // sensorminwavelength sensortimeundersample sensorintegrateflux sensorspectrumrange sensorspectrumstepsfac
+        1 0 0 1 // fourierspec fourierstart fourierlength fourierwindow
+      end
+    end
+  end
+  begin <pdVariablesNode(1.0)> "Variables 1"
+    Dline = 0.01
+  end
+end

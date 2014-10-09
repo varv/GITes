@@ -1,0 +1,9 @@
+MiePlot 4100 batch file
+
+step
+wavelength
+0.4 0.7 0.02
+
+run
+
+stop
